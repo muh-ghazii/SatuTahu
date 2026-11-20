@@ -1,0 +1,1142 @@
+{
+"Asabeneh/30-Days-Of-JavaScript": {
+"desc": "30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+"stars": 47008
+},
+"Asabeneh/30-Days-Of-Python": {
+"desc": "The 30 Days of Python programming challenge is a step-by-step guide to learn the Python programming language in 30 days. This challenge may take more than 100 days. Follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+"stars": 79159
+},
+"Asabeneh/30-Days-Of-React": {
+"desc": "30 Days of  React challenge is a step by step guide to learn React in 30 days.  These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+"stars": 27526
+},
+"Avik-Jain/100-Days-Of-ML-Code": {
+"desc": "100 Days of ML Coding. Contribute to Avik-Jain/100-Days-Of-ML-Code development by creating an account on GitHub.",
+"stars": 52075
+},
+"ByteByteGoHq/system-design-101": {
+"desc": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+"stars": 91317
+},
+"CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers": {
+"desc": "aka \"Bayesian Methods for Hackers\": An introduction to Bayesian methods + probabilistic programming with a computation/understanding-first, mathematics-second point of view. All in pure Python ;)   - GitHub - CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers: aka \"Bayesian Methods for Hackers\": An introduction to Bayesian methods + probabilistic programming with a computation/understanding-first, mathematics-second point of view. All in pure Python ;)",
+"stars": 28210
+},
+"ChristosChristofidis/awesome-deep-learning": {
+"desc": "A curated list of awesome Deep Learning tutorials, projects and communities.",
+"stars": 29216
+},
+"CodeCutTech/Data-science": {
+"desc": "Collection of useful data science topics along with articles, videos, and code",
+"stars": 4211
+},
+"CodeCutTech/Efficient_Python_tricks_and_tools_for_data_scientists": {
+"desc": "Efficient Python Tricks and Tools for Data Scientists",
+"stars": 1495
+},
+"DataExpert-io/data-engineer-handbook": {
+"desc": "This is a repo with links to everything you'd ever want to learn about data engineering",
+"stars": 45222
+},
+"DataTalksClub/data-engineering-zoomcamp": {
+"desc": "Data Engineering Zoomcamp is a free 9-week course on building production-ready data pipelines. Join the course here 👇🏼",
+"stars": 46985
+},
+"DataTalksClub/llm-zoomcamp": {
+"desc": "LLM Zoomcamp - a free online course about real-life applications of LLMs. In 10 weeks you will learn how to build an AI system that answers questions about your knowledge base. Register here 👇🏼",
+"stars": 7713
+},
+"DataTalksClub/machine-learning-zoomcamp": {
+"desc": "Learn ML engineering for free in 4 months! Register here 👇🏼",
+"stars": 14992
+},
+"DataTalksClub/mlops-zoomcamp": {
+"desc": "Free MLOps course from DataTalks.Club. Register here 👇🏼 to get notified about the next cohort",
+"stars": 15585
+},
+"Developer-Y/cs-video-courses": {
+"desc": "List of Computer Science courses with video lectures.",
+"stars": 84892
+},
+"EbookFoundation/free-programming-books": {
+"desc": ":books: Freely available programming books. Contribute to EbookFoundation/free-programming-books development by creating an account on GitHub.",
+"stars": 401938
+},
+"GDQuest/learn-gdscript": {
+"desc": "",
+"stars": 2827
+},
+"GNS3/gns3-gui": {
+"desc": "GNS3 Graphical Network Simulator. Contribute to GNS3/gns3-gui development by creating an account on GitHub.",
+"stars": 2676
+},
+"GokuMohandas/Made-With-ML": {
+"desc": "Learn how to develop, deploy and iterate on production-grade ML applications.",
+"stars": 50097
+},
+"GoogleCloudPlatform/microservices-demo": {
+"desc": "",
+"stars": 21207
+},
+"HQarroum/awesome-iot": {
+"desc": "",
+"stars": 4573
+},
+"Hannibal046/Awesome-LLM": {
+"desc": "Awesome-LLM: a curated list of Large Language Model",
+"stars": 27511
+},
+"JStumpp/awesome-android": {
+"desc": "A curated list of awesome Android packages and resources.",
+"stars": 12473
+},
+"Kavex/GameDev-Resources": {
+"desc": "",
+"stars": 7218
+},
+"MichaelCade/90DaysOfDevOps": {
+"desc": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic.  - GitHub - MichaelCade/90DaysOfDevOps: This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic.",
+"stars": 30931
+},
+"NirDiamant/GenAI_Agents": {
+"desc": "50+ tutorials and implementations for Generative AI Agent techniques, from basic conversational bots to complex multi-agent systems.",
+"stars": 25077
+},
+"NirDiamant/RAG_Techniques": {
+"desc": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. Each technique has a detailed notebook tutorial.",
+"stars": 30445
+},
+"OBenner/data-engineering-interview-questions": {
+"desc": "More than 2000+ Data engineer interview questions.",
+"stars": 1810
+},
+"OWASP/ASVS": {
+"desc": "",
+"stars": 3807
+},
+"OWASP/CheatSheetSeries": {
+"desc": "The OWASP Cheat Sheet Series was created to provide a concise collection of high value information on specific application security topics.",
+"stars": 34142
+},
+"OWASP/Top10": {
+"desc": "",
+"stars": 6585
+},
+"OWASP/wstg": {
+"desc": "",
+"stars": 10336
+},
+"PacktPublishing/Mastering-Python-Networking-Fourth-Edition": {
+"desc": "Mastering Python Networking, Fourth Edition - Published by Packt",
+"stars": 138
+},
+"ProgrammerZamanNow/belajar-golang-dasar": {
+"desc": "Belajar GoLang Dasar. Contribute to ProgrammerZamanNow/belajar-golang-dasar development by creating an account on GitHub.",
+"stars": 118
+},
+"ProgrammerZamanNow/belajar-java-dasar": {
+"desc": "Belajar Java Dasar. Contribute to ProgrammerZamanNow/belajar-java-dasar development by creating an account on GitHub.",
+"stars": 42
+},
+"ProgrammerZamanNow/belajar-nodejs-dasar": {
+"desc": "",
+"stars": 42
+},
+"SeleniumHQ/selenium": {
+"desc": "",
+"stars": 34600
+},
+"Shubhamsaboo/awesome-llm-apps": {
+"desc": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+"stars": 145142
+},
+"Solido/awesome-flutter": {
+"desc": "An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.",
+"stars": 61974
+},
+"TheAlgorithms/JavaScript": {
+"desc": "Algorithms and Data Structures implemented in JavaScript for beginners, following best practices.",
+"stars": 34267
+},
+"TheAlgorithms/Python": {
+"desc": "All Algorithms implemented in Python. Contribute to TheAlgorithms/Python development by creating an account on GitHub.",
+"stars": 226334
+},
+"TheJambo/awesome-testing": {
+"desc": "",
+"stars": 2424
+},
+"TheOdinProject/curriculum": {
+"desc": "The open curriculum for learning web development. Contribute to TheOdinProject/curriculum development by creating an account on GitHub.",
+"stars": 13270
+},
+"UnityCommunity/UnityLibrary": {
+"desc": "",
+"stars": 4418
+},
+"a11yproject/a11yproject.com": {
+"desc": "The A11Y Project is a community-driven effort to make digital accessibility easier.",
+"stars": 3913
+},
+"academic/awesome-datascience": {
+"desc": ":memo: An awesome Data Science repository to learn and apply for real world problems.",
+"stars": 30350
+},
+"afshinea/stanford-cs-229-machine-learning": {
+"desc": "VIP cheatsheets for Stanford's CS 229 Machine Learning",
+"stars": 20393
+},
+"afshinea/stanford-cs-230-deep-learning": {
+"desc": "VIP cheatsheets for Stanford's CS 230 Deep Learning",
+"stars": 7143
+},
+"ageron/handson-ml3": {
+"desc": "A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python using Scikit-Learn, Keras and TensorFlow 2.",
+"stars": 14505
+},
+"airbnb/javascript": {
+"desc": "JavaScript Style Guide. Contribute to airbnb/javascript development by creating an account on GitHub.",
+"stars": 148020
+},
+"aladdinpersson/Machine-Learning-Collection": {
+"desc": "A resource for learning about Machine learning & Deep Learning",
+"stars": 8489
+},
+"alex/what-happens-when": {
+"desc": "An attempt to answer the age old interview question \"What happens when you type google.com into your browser and press enter?\"",
+"stars": 43490
+},
+"alexeygrigorev/data-science-interviews": {
+"desc": "Data science interview questions and answers. Contribute to alexeygrigorev/data-science-interviews development by creating an account on GitHub.",
+"stars": 10238
+},
+"alexpate/awesome-design-systems": {
+"desc": "💅🏻 ⚒ A collection of awesome design systems. Contribute to alexpate/awesome-design-systems development by creating an account on GitHub.",
+"stars": 26406
+},
+"amitshekhariitbhu/android-interview-questions": {
+"desc": "Your Cheat Sheet For Android Interview - Android Interview Questions and Answers",
+"stars": 12365
+},
+"andkret/Cookbook": {
+"desc": "The Data Engineering Cookbook. Contribute to andkret/Cookbook development by creating an account on GitHub.",
+"stars": 15589
+},
+"android/architecture-samples": {
+"desc": "A collection of samples to discuss and showcase different architectural tools and patterns for Android apps.",
+"stars": 45901
+},
+"android/codelab-android-compose": {
+"desc": "",
+"stars": 1727
+},
+"android/compose-samples": {
+"desc": "Official Jetpack Compose samples. Contribute to android/compose-samples development by creating an account on GitHub.",
+"stars": 23566
+},
+"android/nowinandroid": {
+"desc": "A fully functional Android app built entirely with Kotlin and Jetpack Compose",
+"stars": 22109
+},
+"anthropics/claude-cookbooks": {
+"desc": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+"stars": 54900
+},
+"apache/airflow": {
+"desc": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
+"stars": 47570
+},
+"apache/spark": {
+"desc": "Apache Spark - A unified analytics engine for large-scale data processing",
+"stars": 44590
+},
+"apsdehal/awesome-ctf": {
+"desc": "",
+"stars": 12010
+},
+"arduino/Arduino": {
+"desc": "",
+"stars": 14718
+},
+"atinfo/awesome-test-automation": {
+"desc": "",
+"stars": 7231
+},
+"avelino/awesome-go": {
+"desc": "A curated list of awesome Go frameworks, libraries and software",
+"stars": 194925
+},
+"awesomedata/awesome-public-datasets": {
+"desc": "A topic-centric list of HQ open datasets. Contribute to awesomedata/awesome-public-datasets development by creating an account on GitHub.",
+"stars": 80213
+},
+"basarat/typescript-book": {
+"desc": ":books: The definitive guide to TypeScript and possibly the best TypeScript book :book:. Free and Open Source 🌹",
+"stars": 21581
+},
+"batfish/batfish": {
+"desc": "Batfish is a network configuration analysis tool that can find bugs and guarantee the correctness of (planned or current) network configurations. It enables network engineers to rapidly and safely evolve their network, without fear of outages or security breaches.",
+"stars": 1538
+},
+"beejjorgensen/bgnet": {
+"desc": "Beej's Guide to Network Programming source. Contribute to beejjorgensen/bgnet development by creating an account on GitHub.",
+"stars": 1273
+},
+"bellshade/Golang": {
+"desc": "Repositori untuk belajar pemrograman Go dalam bahasa Indonesia",
+"stars": 121
+},
+"bellshade/Javascript": {
+"desc": "Repositori untuk belajar pemrograman Javascript dalam bahasa Indonesia",
+"stars": 404
+},
+"bellshade/Kotlin": {
+"desc": "Repositori untuk belajar pemrograman Kotlin dalam bahasa Indonesia",
+"stars": 16
+},
+"bellshade/Python": {
+"desc": "Repositori untuk belajar pemrograman Python dalam bahasa Indonesia",
+"stars": 219
+},
+"binhnguyennus/awesome-scalability": {
+"desc": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
+"stars": 75901
+},
+"bradtraversy/50projects50days": {
+"desc": "50+ mini web projects using HTML, CSS & JS. Contribute to bradtraversy/50projects50days development by creating an account on GitHub.",
+"stars": 40637
+},
+"bradtraversy/design-resources-for-developers": {
+"desc": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more",
+"stars": 67430
+},
+"bregman-arie/devops-exercises": {
+"desc": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+"stars": 86902
+},
+"brunopulis/awesome-a11y": {
+"desc": "A curate list about A11Y. Contribute to brunopulis/awesome-a11y development by creating an account on GitHub.",
+"stars": 2006
+},
+"caesar0301/awesome-pcaptools": {
+"desc": "A collection of tools developed by other researchers in the Computer Science area to process network traces. All the right reserved for the original authors.",
+"stars": 3440
+},
+"cfenollosa/os-tutorial": {
+"desc": "",
+"stars": 30831
+},
+"chiphuyen/aie-book": {
+"desc": "[WIP] Resources for AI engineers. Also contains supporting materials for the book AI Engineering (Chip Huyen, 2025)",
+"stars": 18362
+},
+"chiphuyen/ml-interviews-book": {
+"desc": "https://huyenchip.com/ml-interviews-book/. Contribute to chiphuyen/ml-interviews-book development by creating an account on GitHub.",
+"stars": 4818
+},
+"codecrafters-io/build-your-own-x": {
+"desc": "Master programming by recreating your favorite technologies from scratch.",
+"stars": 564060
+},
+"cs231n/cs231n.github.io": {
+"desc": "Public facing notes page. Contribute to cs231n/cs231n.github.io development by creating an account on GitHub.",
+"stars": 11124
+},
+"ctf-wiki/ctf-wiki": {
+"desc": "",
+"stars": 9778
+},
+"cypress-io/cypress-realworld-app": {
+"desc": "",
+"stars": 5916
+},
+"d2l-ai/d2l-en": {
+"desc": "Interactive deep learning book with multi-framework code, math, and discussions. Adopted at 500 universities from 70 countries including Stanford, MIT, Harvard, and Cambridge.",
+"stars": 30089
+},
+"dabeaz-course/python-mastery": {
+"desc": "Advanced Python Mastery (course by @dabeaz). Contribute to dabeaz-course/python-mastery development by creating an account on GitHub.",
+"stars": 13350
+},
+"dair-ai/ML-Papers-Explained": {
+"desc": "Explanation to key concepts in ML. Contribute to dair-ai/ML-Papers-Explained development by creating an account on GitHub.",
+"stars": 8933
+},
+"dair-ai/ML-YouTube-Courses": {
+"desc": "📺 Discover the latest machine learning / AI courses on YouTube.",
+"stars": 17478
+},
+"dair-ai/Prompt-Engineering-Guide": {
+"desc": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
+"stars": 80233
+},
+"dastergon/awesome-sre": {
+"desc": "",
+"stars": 13792
+},
+"databricks/LearningSparkV2": {
+"desc": "This is the github repo for Learning Spark: Lightning-Fast Data Analytics [2nd Edition]",
+"stars": 1415
+},
+"datasciencemasters/go": {
+"desc": "The Open Source Data Science Masters. Contribute to datasciencemasters/go development by creating an account on GitHub.",
+"stars": 26408
+},
+"dbt-labs/dbt": {
+"desc": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
+"stars": 14192
+},
+"dhamaniasad/awesome-postgres": {
+"desc": "A curated list of awesome PostgreSQL software, libraries, tools and resources, inspired by awesome-mysql",
+"stars": 12191
+},
+"digininja/DVWA": {
+"desc": "",
+"stars": 14060
+},
+"dipanjanS/practical-machine-learning-with-python": {
+"desc": "Master the essential skills needed to recognize and solve complex real-world problems with Machine Learning and Deep Learning by leveraging the highly popular Python Machine Learning Eco-system.",
+"stars": 2400
+},
+"docker/awesome-compose": {
+"desc": "Awesome Docker Compose samples. Contribute to docker/awesome-compose development by creating an account on GitHub.",
+"stars": 46736
+},
+"donnemartin/data-science-ipython-notebooks": {
+"desc": "Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines.",
+"stars": 29394
+},
+"donnemartin/interactive-coding-challenges": {
+"desc": "",
+"stars": 31969
+},
+"donnemartin/system-design-primer": {
+"desc": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+"stars": 378605
+},
+"duckdb/duckdb": {
+"desc": "DuckDB is a high-performance analytical database system",
+"stars": 43202
+},
+"dwyl/learn-flutter": {
+"desc": "🦋 Learn how to use Flutter to Build Cross-platform Native Mobile Apps",
+"stars": 98
+},
+"dylanaraps/pure-bash-bible": {
+"desc": "",
+"stars": 41714
+},
+"eclipse-mosquitto/mosquitto": {
+"desc": "",
+"stars": 11475
+},
+"ellisonleao/magictools": {
+"desc": "",
+"stars": 17835
+},
+"enaqx/awesome-react": {
+"desc": "A collection of awesome things regarding React ecosystem",
+"stars": 75338
+},
+"enochtangg/quick-SQL-cheatsheet": {
+"desc": "A quick reminder of all SQL queries and examples on how to use them.  - GitHub - enochtangg/quick-SQL-cheatsheet: A quick reminder of all SQL queries and examples on how to use them.",
+"stars": 5488
+},
+"esphome/esphome": {
+"desc": "",
+"stars": 12132
+},
+"espressif/arduino-esp32": {
+"desc": "",
+"stars": 17772
+},
+"eugeneyan/applied-ml": {
+"desc": "📚 Papers & tech blogs by companies sharing their work on data science & machine learning in production.",
+"stars": 30941
+},
+"expo/expo": {
+"desc": "An open-source framework for making universal native apps with React. Expo runs on Android, iOS, and the web.",
+"stars": 53689
+},
+"facebookresearch/detectron2": {
+"desc": "Detectron2 is a platform for object detection, segmentation and other visual recognition tasks.",
+"stars": 34995
+},
+"facebookresearch/segment-anything": {
+"desc": "The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+"stars": 55168
+},
+"facyber/awesome-networking": {
+"desc": "A collection of awesome networking courses, books, tutorials and other resources",
+"stars": 1334
+},
+"fastai/fastbook": {
+"desc": "The fastai book, published as Jupyter Notebooks. Contribute to fastai/fastbook development by creating an account on GitHub.",
+"stars": 25500
+},
+"firstcontributions/first-contributions": {
+"desc": "",
+"stars": 56955
+},
+"florinpop17/app-ideas": {
+"desc": "A Collection of application ideas which can be used to improve your coding skills.",
+"stars": 98638
+},
+"flutter/codelabs": {
+"desc": "Flutter codelab examples. Contribute to flutter/codelabs development by creating an account on GitHub.",
+"stars": 2121
+},
+"flutter/samples": {
+"desc": "A collection of Flutter examples and demos. Contribute to flutter/samples development by creating an account on GitHub.",
+"stars": 19296
+},
+"freeCodeCamp/freeCodeCamp": {
+"desc": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+"stars": 459379
+},
+"fullstack-hy2020/fullstack-hy2020.github.io": {
+"desc": "",
+"stars": 2254
+},
+"futurice/backend-best-practices": {
+"desc": "An evolving description of general best practices for backend development.",
+"stars": 2408
+},
+"getify/You-Dont-Know-JS": {
+"desc": "A book series (2 published editions) on the JS language.",
+"stars": 184865
+},
+"gns3/gns3-server": {
+"desc": "GNS3 server. Contribute to GNS3/gns3-server development by creating an account on GitHub.",
+"stars": 1049
+},
+"goabstract/Awesome-Design-Tools": {
+"desc": "The best design tools and plugins for everything 👉",
+"stars": 41966
+},
+"godotengine/godot": {
+"desc": "",
+"stars": 120467
+},
+"godotengine/godot-demo-projects": {
+"desc": "",
+"stars": 9816
+},
+"goldbergyoni/javascript-testing-best-practices": {
+"desc": "📗🌐 🚢 Comprehensive and exhaustive JavaScript & Node.js testing best practices (August 2025)",
+"stars": 24613
+},
+"goldbergyoni/nodebestpractices": {
+"desc": "✅ The Node.js best practices list (July 2026). Contribute to goldbergyoni/nodebestpractices development by creating an account on GitHub.",
+"stars": 105754
+},
+"google-developer-training/basic-android-kotlin-compose-training-courses": {
+"desc": "",
+"stars": 43
+},
+"gracenolan/Notes": {
+"desc": "",
+"stars": 2752
+},
+"grafana/k6": {
+"desc": "",
+"stars": 32369
+},
+"greatfrontend/top-reactjs-interview-questions": {
+"desc": "Most important React.js interview questions for busy Frontend Engineers (updated for 2026)",
+"stars": 6120
+},
+"guipsamora/pandas_exercises": {
+"desc": "Practice your pandas skills! Contribute to guipsamora/pandas_exercises development by creating an account on GitHub.",
+"stars": 13370
+},
+"gztchan/awesome-design": {
+"desc": "🌟 Curated design resources from all over the world.",
+"stars": 17803
+},
+"h5bp/Front-end-Developer-Interview-Questions": {
+"desc": "A list of helpful front-end related questions you can use to interview potential candidates, test yourself or completely ignore.",
+"stars": 60839
+},
+"hal9ai/awesome-dataviz": {
+"desc": "A curated list of awesome data visualization libraries and resources.",
+"stars": 4465
+},
+"hashicorp/terraform": {
+"desc": "",
+"stars": 50299
+},
+"huggingface/agents-course": {
+"desc": "This repository contains the Hugging Face Agents Course.  - GitHub - huggingface/agents-course: This repository contains the Hugging Face Agents Course.",
+"stars": 35223
+},
+"huggingface/course": {
+"desc": "The Hugging Face course on Transformers. Contribute to huggingface/course development by creating an account on GitHub.",
+"stars": 4375
+},
+"huggingface/pytorch-image-models": {
+"desc": "The largest collection of PyTorch image encoders / backbones. Including train, eval, inference, export scripts, and pretrained weights -- ResNet, ResNeXT, EfficientNet, NFNet, Vision Transformer (ViT), MobileNetV4, MobileNet-V3 & V2, RegNet, DPN, CSPNet, Swin Transformer, MaxViT, CoAtNet, ConvNeXt, and more",
+"stars": 37296
+},
+"huggingface/transformers": {
+"desc": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.  - GitHub - huggingface/transformers: 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+"stars": 169315
+},
+"iampawan/FlutterExampleApps": {
+"desc": "[Example APPS] Basic Flutter apps, for flutter devs.",
+"stars": 21503
+},
+"igorbarinov/awesome-data-engineering": {
+"desc": "A curated list of data engineering tools for software developers",
+"stars": 9279
+},
+"imthenachoman/How-To-Secure-A-Linux-Server": {
+"desc": "An evolving how-to guide for securing a Linux server.",
+"stars": 32087
+},
+"jakevdp/PythonDataScienceHandbook": {
+"desc": "Python Data Science Handbook: full text in Jupyter Notebooks",
+"stars": 50462
+},
+"jakevdp/WhirlwindTourOfPython": {
+"desc": "The Jupyter Notebooks behind my OReilly report, \"A Whirlwind Tour of Python\"",
+"stars": 4056
+},
+"javascript-tutorial/en.javascript.info": {
+"desc": "Modern JavaScript Tutorial . Contribute to javascript-tutorial/en.javascript.info development by creating an account on GitHub.",
+"stars": 25533
+},
+"jbhuang0604/awesome-computer-vision": {
+"desc": "A curated list of awesome computer vision resources",
+"stars": 23659
+},
+"jlevy/the-art-of-command-line": {
+"desc": "Master the command line, in one page. Contribute to jlevy/the-art-of-command-line development by creating an account on GitHub.",
+"stars": 162815
+},
+"jondot/awesome-react-native": {
+"desc": "Awesome React Native components, news, tools, and learning material!",
+"stars": 35707
+},
+"josephmachado/beginner_de_project": {
+"desc": "Beginner data engineering project - batch edition. Contribute to josephmachado/beginner_de_project development by creating an account on GitHub.",
+"stars": 621
+},
+"josephmisiti/awesome-machine-learning": {
+"desc": "A curated list of awesome Machine Learning frameworks, libraries and software.",
+"stars": 74857
+},
+"juice-shop/juice-shop": {
+"desc": "",
+"stars": 14495
+},
+"jwasham/coding-interview-university": {
+"desc": "A complete computer science study plan to become a software engineer.",
+"stars": 364632
+},
+"k88hudson/git-flight-rules": {
+"desc": "",
+"stars": 42576
+},
+"karanpratapsingh/system-design": {
+"desc": "Learn how to design systems at scale and prepare for system design interviews",
+"stars": 46975
+},
+"karpathy/nanoGPT": {
+"desc": "The simplest, fastest repository for training/finetuning medium-sized GPTs.",
+"stars": 64954
+},
+"karpathy/nn-zero-to-hero": {
+"desc": "Neural Networks: Zero to Hero. Contribute to karpathy/nn-zero-to-hero development by creating an account on GitHub.",
+"stars": 25868
+},
+"kdn251/interviews": {
+"desc": "Everything you need to know to get the job. Contribute to kdn251/interviews development by creating an account on GitHub.",
+"stars": 65575
+},
+"kelseyhightower/kubernetes-the-hard-way": {
+"desc": "Bootstrap Kubernetes the hard way. No scripts. Contribute to kelseyhightower/kubernetes-the-hard-way development by creating an account on GitHub.",
+"stars": 50742
+},
+"keon/algorithms": {
+"desc": "",
+"stars": 25604
+},
+"kornia/kornia": {
+"desc": "🐍 Geometric Computer Vision Library for Spatial AI",
+"stars": 12397
+},
+"ktbyers/netmiko": {
+"desc": "Multi-vendor library to simplify Paramiko SSH connections to network devices",
+"stars": 4325
+},
+"kubernetes/examples": {
+"desc": "",
+"stars": 6832
+},
+"labmlai/annotated_deep_learning_paper_implementations": {
+"desc": "🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠",
+"stars": 67775
+},
+"langchain-ai/langchain": {
+"desc": "The agent engineering platform. Contribute to langchain-ai/langchain development by creating an account on GitHub.",
+"stars": 149965
+},
+"leonardomso/33-js-concepts": {
+"desc": "📜 33 JavaScript concepts every developer should know.",
+"stars": 66535
+},
+"mage-ai/mage-ai": {
+"desc": "🧙 Build, run, and manage data pipelines for integrating and transforming data.",
+"stars": 8850
+},
+"material-components/material-web": {
+"desc": "Material Design Web Components. Contribute to material-components/material-web development by creating an account on GitHub.",
+"stars": 11460
+},
+"matplotlib/cheatsheets": {
+"desc": "Official Matplotlib cheat sheets. Contribute to matplotlib/cheatsheets development by creating an account on GitHub.",
+"stars": 7750
+},
+"mbeaudru/modern-js-cheatsheet": {
+"desc": "Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.",
+"stars": 25570
+},
+"mdn/content": {
+"desc": "The official source for MDN Web Docs content. Home to over 14,000 pages of documentation about HTML, CSS, JS, HTTP, Web APIs, and more.",
+"stars": 11156
+},
+"meirwah/awesome-incident-response": {
+"desc": "",
+"stars": 9586
+},
+"microsoft/AI-For-Beginners": {
+"desc": "12 Weeks, 24 Lessons, AI for All! Contribute to microsoft/AI-For-Beginners development by creating an account on GitHub.",
+"stars": 71037
+},
+"microsoft/Data-Science-For-Beginners": {
+"desc": "10 Weeks, 20 Lessons, Data Science for All! Contribute to microsoft/Data-Science-For-Beginners development by creating an account on GitHub.",
+"stars": 38103
+},
+"microsoft/IoT-For-Beginners": {
+"desc": "12 Weeks, 24 Lessons, IoT for All! Contribute to microsoft/IoT-For-Beginners development by creating an account on GitHub.",
+"stars": 17203
+},
+"microsoft/ML-For-Beginners": {
+"desc": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
+"stars": 92342
+},
+"microsoft/Security-101": {
+"desc": "8 Lessons, Kick-start Your Cybersecurity Learning.",
+"stars": 7057
+},
+"microsoft/Web-Dev-For-Beginners": {
+"desc": "24 Lessons, 12 Weeks, Get Started as a Web Developer",
+"stars": 97140
+},
+"microsoft/ai-agents-for-beginners": {
+"desc": "18 Lessons to Get Started Building AI Agents. Contribute to microsoft/ai-agents-for-beginners development by creating an account on GitHub.",
+"stars": 80572
+},
+"microsoft/api-guidelines": {
+"desc": "Microsoft REST API Guidelines. Contribute to microsoft/api-guidelines development by creating an account on GitHub.",
+"stars": 23351
+},
+"microsoft/c9-python-getting-started": {
+"desc": "Sample code for Channel 9 Python for Beginners course",
+"stars": 8030
+},
+"microsoft/computervision-recipes": {
+"desc": "Best Practices, code samples, and documentation for Computer Vision.",
+"stars": 9887
+},
+"microsoft/frontend-bootcamp": {
+"desc": "Frontend Workshop from HTML/CSS/JS to TypeScript/React/Redux",
+"stars": 10769
+},
+"microsoft/generative-ai-for-beginners": {
+"desc": "21 Lessons, Get Started Building with Generative AI  - GitHub - microsoft/generative-ai-for-beginners: 21 Lessons, Get Started Building with Generative AI",
+"stars": 123894
+},
+"microsoft/mcp-for-beginners": {
+"desc": "This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.",
+"stars": 17687
+},
+"microsoft/playwright": {
+"desc": "",
+"stars": 100661
+},
+"microsoft/powerbi-desktop-samples": {
+"desc": "Power BI Desktop sample files for the monthly release. Here you can find the PBIX files used in the monthly release videos.",
+"stars": 2264
+},
+"milanm/DevOps-Roadmap": {
+"desc": "",
+"stars": 21010
+},
+"miloyip/game-programmer": {
+"desc": "",
+"stars": 18757
+},
+"mininet/mininet": {
+"desc": "Emulator for rapid prototyping of Software Defined Networks",
+"stars": 5881
+},
+"mitesh77/Best-Flutter-UI-Templates": {
+"desc": "completely free for everyone. Its build-in Flutter Dart.",
+"stars": 22868
+},
+"mlabonne/llm-course": {
+"desc": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+"stars": 85165
+},
+"mobile-dev-inc/maestro": {
+"desc": "Painless E2E Automation for Mobile and Web. Contribute to mobile-dev-inc/Maestro development by creating an account on GitHub.",
+"stars": 16467
+},
+"modelcontextprotocol/servers": {
+"desc": "Model Context Protocol Reference Servers. Contribute to modelcontextprotocol/servers development by creating an account on GitHub.",
+"stars": 92131
+},
+"mrdbourke/pytorch-deep-learning": {
+"desc": "Materials for the Learn PyTorch for Deep Learning: Zero to Mastery course.",
+"stars": 19442
+},
+"mrdbourke/zero-to-mastery-ml": {
+"desc": "All course materials for the Zero to Mastery Machine Learning and Data Science course.",
+"stars": 7651
+},
+"mrgloom/awesome-semantic-segmentation": {
+"desc": ":metal: awesome-semantic-segmentation. Contribute to mrgloom/awesome-semantic-segmentation development by creating an account on GitHub.",
+"stars": 10850
+},
+"munificent/game-programming-patterns": {
+"desc": "",
+"stars": 4580
+},
+"napalm-automation/napalm": {
+"desc": "Network Automation and Programmability Abstraction Layer with Multivendor support",
+"stars": 2530
+},
+"nestjs/nest": {
+"desc": "A progressive TypeScript framework for Node.js backends: from a small API in one file to efficient, scalable, enterprise-grade systems 🚀",
+"stars": 77116
+},
+"netbox-community/netbox": {
+"desc": "The premier source of truth powering network automation. Open source under Apache 2. Try NetBox Cloud free: https://netboxlabs.com/products/free-netbox-cloud/",
+"stars": 21911
+},
+"networktocode/awesome-network-automation": {
+"desc": "Curated Awesome list about Network Automation. Contribute to networktocode/awesome-network-automation development by creating an account on GitHub.",
+"stars": 2894
+},
+"nicolesaidy/awesome-web-design": {
+"desc": "🎨 A curated list of awesome resources for digital designers.",
+"stars": 2817
+},
+"nilbuild/developer-roadmap": {
+"desc": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+"stars": 372421
+},
+"nmap/nmap": {
+"desc": "Nmap - the Network Mapper. Github mirror of official SVN repository.",
+"stars": 14035
+},
+"nornir-automation/nornir": {
+"desc": "Pluggable multi-threaded framework with inventory management to help operate collections of devices",
+"stars": 1641
+},
+"obytes/react-native-template-obytes": {
+"desc": "📱 A template for your next React Native project: Expo, PNPM, TypeScript, TailwindCSS, Husky, EAS, GitHub Actions, Env Vars, expo-router, react-query, react-hook-form.",
+"stars": 4375
+},
+"open-guides/og-aws": {
+"desc": "",
+"stars": 36466
+},
+"open-mmlab/mmdetection": {
+"desc": "OpenMMLab Detection Toolbox and Benchmark. Contribute to open-mmlab/mmdetection development by creating an account on GitHub.",
+"stars": 33045
+},
+"openai/openai-cookbook": {
+"desc": "Examples and guides for using the OpenAI API. Contribute to openai/openai-cookbook development by creating an account on GitHub.",
+"stars": 77248
+},
+"opencv/opencv": {
+"desc": "Open Source Computer Vision Library. Contribute to opencv/opencv development by creating an account on GitHub.",
+"stars": 91651
+},
+"ossu/computer-science": {
+"desc": "🎓 Path to a free self-taught education in Computer Science!",
+"stars": 211355
+},
+"ossu/data-science": {
+"desc": "📊 Path to a free self-taught education in Data Science!",
+"stars": 22429
+},
+"paragonie/awesome-appsec": {
+"desc": "",
+"stars": 7151
+},
+"patchy631/ai-engineering-hub": {
+"desc": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+"stars": 42032
+},
+"pcottle/learnGitBranching": {
+"desc": "",
+"stars": 34232
+},
+"phaserjs/phaser": {
+"desc": "",
+"stars": 40750
+},
+"phodal/awesome-iot": {
+"desc": "",
+"stars": 4635
+},
+"platformio/platformio-core": {
+"desc": "",
+"stars": 9619
+},
+"practical-tutorials/project-based-learning": {
+"desc": "Curated list of project-based tutorials. Contribute to practical-tutorials/project-based-learning development by creating an account on GitHub.",
+"stars": 290080
+},
+"prisma/prisma-examples": {
+"desc": " 🚀 Ready-to-run Prisma example projects. Contribute to prisma/prisma-examples development by creating an account on GitHub.",
+"stars": 6650
+},
+"prometheus/prometheus": {
+"desc": "",
+"stars": 67737
+},
+"public-apis/public-apis": {
+"desc": "A collective list of free APIs. Contribute to public-apis/public-apis development by creating an account on GitHub.",
+"stars": 500424
+},
+"quii/learn-go-with-tests": {
+"desc": "Learn Go with test-driven development. Contribute to quii/learn-go-with-tests development by creating an account on GitHub.",
+"stars": 23968
+},
+"rasbt/LLMs-from-scratch": {
+"desc": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+"stars": 108698
+},
+"rasbt/deeplearning-models": {
+"desc": "A collection of various deep learning architectures, models, and tips",
+"stars": 17640
+},
+"rasbt/machine-learning-book": {
+"desc": "Code Repository for Machine Learning with PyTorch and Scikit-Learn",
+"stars": 5484
+},
+"raysan5/raylib": {
+"desc": "",
+"stars": 35744
+},
+"reactjs/react.dev": {
+"desc": "The React documentation website. Contribute to reactjs/react.dev development by creating an account on GitHub.",
+"stars": 11847
+},
+"realworld-apps/realworld": {
+"desc": "\"The mother of all demo apps\" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more",
+"stars": 84395
+},
+"remzi-arpacidusseau/ostep-projects": {
+"desc": "",
+"stars": 6199
+},
+"rfordatascience/tidytuesday": {
+"desc": "Official repo for the #tidytuesday project. Contribute to rfordatascience/tidytuesday development by creating an account on GitHub.",
+"stars": 8516
+},
+"roboflow/notebooks": {
+"desc": "A collection of tutorials on state-of-the-art computer vision models and techniques. Explore everything from foundational architectures like ResNet to cutting-edge models like RF-DETR, YOLO11, SAM 3, and Qwen3-VL.",
+"stars": 9746
+},
+"roboflow/supervision": {
+"desc": "We write your reusable computer vision tools. 💜. Contribute to roboflow/supervision development by creating an account on GitHub.",
+"stars": 51676
+},
+"rougier/numpy-100": {
+"desc": "100 numpy exercises (with solutions). Contribute to rougier/numpy-100 development by creating an account on GitHub.",
+"stars": 14700
+},
+"rust-lang/book": {
+"desc": "The Rust Programming Language. Contribute to rust-lang/book development by creating an account on GitHub.",
+"stars": 18599
+},
+"ryanmcdermott/clean-code-javascript": {
+"desc": "Clean Code concepts adapted for JavaScript. Contribute to ryanmcdermott/clean-code-javascript development by creating an account on GitHub.",
+"stars": 94692
+},
+"sbilly/awesome-security": {
+"desc": "A collection of awesome software, libraries, documents, books, resources and cools stuffs about security.",
+"stars": 15134
+},
+"sdnds-tw/awesome-sdn": {
+"desc": "A awesome list about Software Defined Network (SDN)",
+"stars": 1644
+},
+"sdras/awesome-actions": {
+"desc": "",
+"stars": 28452
+},
+"shadcn-ui/ui": {
+"desc": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+"stars": 128623
+},
+"shieldfy/API-Security-Checklist": {
+"desc": "Checklist of the most important security countermeasures when designing, testing, and releasing your API",
+"stars": 23368
+},
+"shuaibiyy/awesome-tf": {
+"desc": "",
+"stars": 6688
+},
+"sindresorhus/awesome": {
+"desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+"stars": 539780
+},
+"sobolevn/awesome-cryptography": {
+"desc": "",
+"stars": 7213
+},
+"spmallick/learnopencv": {
+"desc": "Learn OpenCV  : C++ and Python Examples. Contribute to spmallick/learnopencv development by creating an account on GitHub.",
+"stars": 23253
+},
+"srl-labs/containerlab": {
+"desc": "container-based networking labs. Contribute to srl-labs/containerlab development by creating an account on GitHub.",
+"stars": 2961
+},
+"sudheerj/javascript-interview-questions": {
+"desc": "List of 1000 JavaScript Interview Questions. Contribute to sudheerj/javascript-interview-questions development by creating an account on GitHub.",
+"stars": 27676
+},
+"sudheerj/reactjs-interview-questions": {
+"desc": "List of top 500 ReactJS Interview Questions & Answers....Coding exercise questions are coming soon!!",
+"stars": 44910
+},
+"tailwindlabs/tailwindcss": {
+"desc": "A utility-first CSS framework for rapid UI development.",
+"stars": 98708
+},
+"techiescamp/kubernetes-learning-path": {
+"desc": "",
+"stars": 7699
+},
+"testing-library/react-testing-library": {
+"desc": "",
+"stars": 19682
+},
+"thedaviddias/Front-End-Checklist": {
+"desc": "🗂 The essential checklist for modern web development, for humans and AI agents",
+"stars": 74783
+},
+"thedaviddias/Front-End-Design-Checklist": {
+"desc": "💎 The Design Checklist for Creative Web Designers and Patient Front-End Developers",
+"stars": 5381
+},
+"tmrts/go-patterns": {
+"desc": "Curated list of Go design patterns, recipes and idioms",
+"stars": 28347
+},
+"trekhleb/homemade-machine-learning": {
+"desc": "🤖 Python examples of popular machine learning algorithms with interactive Jupyter demos and math being explained",
+"stars": 24863
+},
+"trekhleb/javascript-algorithms": {
+"desc": "📝 Algorithms and data structures implemented in JavaScript with explanations and links to further readings",
+"stars": 196754
+},
+"trekhleb/learn-python": {
+"desc": "",
+"stars": 18569
+},
+"trimstray/the-book-of-secret-knowledge": {
+"desc": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+"stars": 259882
+},
+"ttt30ga/awesome-product-design": {
+"desc": "A collection of bookmarks, resources, articles for product designers.",
+"stars": 2773
+},
+"twostraws/HackingWithSwift": {
+"desc": "The project source code for Hacking with iOS. Contribute to twostraws/HackingWithSwift development by creating an account on GitHub.",
+"stars": 6397
+},
+"typescript-cheatsheets/react": {
+"desc": "Cheatsheets for experienced React developers getting started with TypeScript",
+"stars": 47090
+},
+"udlbook/udlbook": {
+"desc": "Understanding Deep Learning - Simon J.D. Prince. Contribute to udlbook/udlbook development by creating an account on GitHub.",
+"stars": 10178
+},
+"ultralytics/ultralytics": {
+"desc": "Ultralytics YOLO27, YOLO26, YOLO11, YOLOv8 — object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
+"stars": 63623
+},
+"ultralytics/yolov5": {
+"desc": "Ultralytics YOLOv5 in PyTorch for object detection, instance segmentation, classification, training, and export.",
+"stars": 58288
+},
+"upgundecha/howtheysre": {
+"desc": "",
+"stars": 9848
+},
+"veggiemonk/awesome-docker": {
+"desc": ":whale: A curated list of Docker resources and projects",
+"stars": 37273
+},
+"vercel/next-learn": {
+"desc": "Learn Next.js Starter Code. Contribute to vercel/next-learn development by creating an account on GitHub.",
+"stars": 4797
+},
+"vinta/awesome-python": {
+"desc": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
+"stars": 335974
+},
+"visenger/awesome-mlops": {
+"desc": "A curated list of references for MLOps . Contribute to visenger/awesome-mlops development by creating an account on GitHub.",
+"stars": 14304
+},
+"vitest-dev/vitest": {
+"desc": "",
+"stars": 17414
+},
+"vsouza/awesome-ios": {
+"desc": "A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects  - GitHub - vsouza/awesome-ios: A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects",
+"stars": 54048
+},
+"wesbos/JavaScript30": {
+"desc": "30 Day Vanilla JS Challenge. Contribute to wesbos/JavaScript30 development by creating an account on GitHub.",
+"stars": 29315
+},
+"wesm/pydata-book": {
+"desc": "Materials and IPython notebooks for \"Python for Data Analysis\" by Wes McKinney, published by O'Reilly Media",
+"stars": 25113
+},
+"williamfiset/Algorithms": {
+"desc": "",
+"stars": 18912
+},
+"wireshark/wireshark": {
+"desc": "Read-only mirror of Wireshark's Git repository at https://gitlab.com/wireshark/wireshark. You're welcome to submit pull requests there.",
+"stars": 10254
+},
+"wsargent/docker-cheat-sheet": {
+"desc": "Docker Cheat Sheet. Contribute to wsargent/docker-cheat-sheet development by creating an account on GitHub.",
+"stars": 22558
+},
+"yangshun/front-end-interview-handbook": {
+"desc": "Front End interview preparation materials for busy engineers (updated for 2026)",
+"stars": 44000
+},
+"zalando/restful-api-guidelines": {
+"desc": "A model set of guidelines for RESTful APIs and Events, created by Zalando",
+"stars": 3272
+}
+}

@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/jetbrains-mono";
+
+/* Palet diambil langsung dari logo SatuTahu */
+@theme {
+  --color-cream: #fdf9ee;
+  --color-paper: #ffffff;
+  --color-sun-50: #fffaeb;
+  --color-sun-100: #fff1c2;
+  --color-sun-200: #ffe38a;
+  --color-sun-300: #ffd866;
+  --color-sun-400: #fec536;
+  --color-sun-500: #f5b316;
+  --color-sun-600: #d99a06;
+  --color-ink: #12203a;
+  --color-ink-2: #1f2f52;
+  --color-ink-3: #2b4475;
+  --color-muted: #59647a;
+  --color-line: #e8e1cc;
+  --color-blush: #f6a99b;
+
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+  --shadow-hard: 4px 4px 0 0 var(--color-ink);
+  --shadow-hard-sm: 2px 2px 0 0 var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0 0 var(--color-ink);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes enter {
+    from { opacity: 0; transform: translateY(var(--enter-y, 12px)); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer base {
+  code, pre, kbd, .font-mono {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    @apply bg-sun-300 text-ink;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-sun-400);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-ink px-5 py-3 text-sm font-bold transition-[transform,box-shadow,background-color] duration-150 select-none;
+    box-shadow: var(--shadow-hard);
+  }
+  .btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 0 var(--color-ink);
+  }
+  .btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 0 var(--color-ink);
+  }
+  .btn-primary {
+    @apply bg-sun-400 text-ink;
+  }
+  .btn-primary:hover {
+    @apply bg-sun-300;
+  }
+  .btn-ghost {
+    @apply bg-paper text-ink;
+  }
+  .btn-dark {
+    @apply bg-ink text-paper;
+  }
+  .card {
+    @apply rounded-2xl border-2 border-ink bg-paper;
+    box-shadow: var(--shadow-hard);
+  }
+  .card-hover {
+    @apply transition-[transform,box-shadow] duration-200;
+  }
+  .card-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-hard-lg);
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border-[1.5px] border-ink bg-paper px-2.5 py-1 text-xs font-semibold;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-ink bg-sun-100 px-3 py-1 text-[11px] font-extrabold tracking-[0.14em] uppercase;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 2px var(--color-ink);
+    paint-order: stroke fill;
+  }
+  .bg-dots {
+    background-image: radial-gradient(var(--color-line) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  .bg-grid-ink {
+    background-image:
+      linear-gradient(to right, rgb(18 32 58 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(18 32 58 / 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+}
+
+/* Animasi masuk berbasis CSS: berjalan tanpa menunggu JavaScript, jadi konten tidak pernah ‘kosong’. */
+.enter {
+  animation: enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0s);
+}
+/* Reveal saat discroll memakai scroll-driven animation bila browser mendukung; jika tidak, langsung terlihat. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: enter linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
