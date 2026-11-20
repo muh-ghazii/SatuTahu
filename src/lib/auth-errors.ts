@@ -13,6 +13,8 @@ export function authErrorMessage(err: unknown): string {
   if (code === "same_password") return "Password baru harus berbeda dari password lama.";
   if (code === "validation_failed" || msg.includes("invalid email")) return "Format email tidak valid.";
   if (msg.includes("failed to fetch") || msg.includes("network")) return "Tidak dapat terhubung ke server. Periksa koneksi internetmu.";
+  if (code === "bad_code_verifier" || msg.includes("code verifier")) return "Tautan login sudah tidak berlaku di browser ini.";
+  if (code === "otp_expired" || msg.includes("expired")) return "Tautan sudah kedaluwarsa. Minta tautan baru.";
   if (msg.includes("provider is not enabled")) return "Login Google belum diaktifkan di pengaturan Supabase.";
   return e?.message || "Terjadi kesalahan. Coba lagi.";
 }
