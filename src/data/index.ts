@@ -3,16 +3,19 @@ import { softwareTracks } from "./tracks-software";
 import { dataTracks } from "./tracks-data";
 import { infraTracks, foundations } from "./tracks-infra";
 import { extraTracks } from "./tracks-extra";
+import { externalSources, externalTypeLabel, sourcesForTrack, type ExternalSource, type ExternalSourceType } from "./external-sources";
+import { trackGuides, getTrackGuide, type TrackGuide, type CheatItem, type MistakeItem, type FlashcardItem } from "./track-guides";
 import type { Category, Resource, Track } from "./types";
 
 export type { Track, Resource, Stage, Category, ResourceKind } from "./types";
-export { foundations };
+export { foundations, externalSources, externalTypeLabel, sourcesForTrack, trackGuides, getTrackGuide };
+export type { ExternalSource, ExternalSourceType, TrackGuide, CheatItem, MistakeItem, FlashcardItem };
 
 type RepoMeta = { stars: number; desc: string };
 const repos = reposJson as Record<string, RepoMeta>;
 
 /** Tanggal snapshot metadata GitHub (jalankan `npm run sync:github` untuk memperbarui) */
-export const SNAPSHOT_DATE = "20 November 2026";
+export const SNAPSHOT_DATE = "27 November 2026";
 
 const byCat = (c: Category) => extraTracks.filter((t) => t.category === c);
 export const tracks: Track[] = [
@@ -108,6 +111,7 @@ export function globalStats() {
   return {
     tracks: tracks.length,
     repos: cat.length,
+    external: externalSources.length,
     stars: cat.reduce((a, c) => a + c.stars, 0),
     stages: tracks.reduce((a, t) => a + t.stages.length, 0),
   };

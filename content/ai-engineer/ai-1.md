@@ -11,6 +11,8 @@ objectives:
 sources:
   - repo: mlabonne/llm-course
     note: Kursus LLM (dasar, ilmuwan LLM, engineer LLM)
+  - repo: rohitg00/ai-engineering-from-scratch
+    note: Kurikulum terbuka 542 pelajaran AI Engineering dari fondasi model hingga produksi
   - repo: rasbt/LLMs-from-scratch
     note: Membangun LLM mirip GPT dari nol (Sebastian Raschka)
   - repo: huggingface/course
@@ -119,8 +121,20 @@ Mitigasi yang terbukti efektif:
 Jangan pernah mengutip referensi, pasal hukum, atau angka dari LLM tanpa memeriksa sumber aslinya, terutama untuk karya ilmiah, laporan, dan keputusan penting.
 :::
 
+:::kasus[Menghitung biaya nyata chatbot berbahasa Indonesia]
+Misal chatbot UMKM menerima 1.000 pertanyaan/hari. Rata-rata prompt + konteks dokumen RAG = 1.800 token input (teks Indonesia umumnya ~1,3–1,8× lebih banyak token dari Inggris!) dan 300 token output. Total bulanan = 54 juta token input + 9 juta token output. Dengan memahami tokenisasi, kamu bisa: (1) memangkas konteks yang tak relevan, (2) memakai prompt caching untuk instruksi sistem yang berulang, dan (3) memakai model ringan (mini/flash) untuk klasifikasi intent sebelum memanggil model besar.
+:::
+
+:::jebakan[Mengira Temperature 0 membuat LLM tidak berhalusinasi]
+`temperature = 0` hanya membuat model selalu memilih token dengan probabilitas tertinggi (**lebih konsisten**), bukan membuatnya **lebih jujur**. Jika informasi tidak ada di konteks atau data latihnya, model tetap bisa mengarang jawaban yang sama secara konsisten! Solusinya tetap grounding (RAG), izin berkata "tidak tahu", dan verifikasi.
+:::
+
 :::latihan
 Milestone: (1) bandingkan jumlah token 5 paragraf bahasa Indonesia vs terjemahan Inggrisnya pada dua tokenizer dan hitung implikasi biayanya; (2) kerjakan bab 2–4 `LLMs-from-scratch` (tokenisasi, attention, GPT kecil); (3) buat eksperimen sampling: satu prompt dijalankan 10× pada tiga temperature dan catat variasinya; (4) susun 10 pertanyaan yang memancing halusinasi (fakta lokal yang jarang), uji ke model, lalu ulangi dengan dokumen sumber di konteks dan bandingkan.
+:::
+
+:::solusi[Tips menjalankan eksperimen tanpa biaya API]
+Kamu bisa menguji eksperimen sampling dan grounding secara **100% gratis di laptop** memakai [Ollama](https://github.com/ollama/ollama) (mis. `ollama run qwen2.5:7b` atau `llama3.2:3b`). Catat perbedaan akurasi sebelum vs sesudah dokumen sumber dimasukkan ke prompt dalam tabel sederhana — ini langsung jadi bahan studi kasus portofolio AI Engineering pertamamu!
 :::
 
 ## Rangkuman

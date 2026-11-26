@@ -1,7 +1,7 @@
 import { visit } from "unist-util-visit";
 import type { Root } from "mdast";
 
-const CALLOUTS = ["tip", "info", "warning", "latihan", "analogi", "contoh"];
+const CALLOUTS = ["tip", "info", "warning", "latihan", "analogi", "contoh", "jebakan", "kasus", "solusi"];
 
 /**
  * - ```viz / ```quiz  → elemen kustom <viz-block>

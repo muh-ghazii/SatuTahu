@@ -18,6 +18,8 @@ sources:
     note: Contoh modul inti Node.js berbahasa Indonesia
   - repo: bellshade/Golang
     note: Materi Go berbahasa Indonesia
+  - repo: novalagung/dasarpemrogramangolang
+    note: Ebook gratis 160+ bab Dasar Pemrograman Golang berbahasa Indonesia
 quiz:
   - q: "Klien mengirim data registrasi dengan email yang formatnya salah. Status code paling tepat?"
     options: ["200 OK", "400 Bad Request (atau 422)", "404 Not Found", "500 Internal Server Error"]
@@ -178,8 +180,19 @@ api-toko/
 
 **Lock file** (`package-lock.json`, `go.sum`, `poetry.lock`) memastikan semua orang dan server produksi memasang versi dependency yang sama persis. Tanpa itu, ‘jalan di laptopku’ menjadi masalah sehari-hari.
 
+:::jebakan[Mengembalikan HTTP 200 OK untuk semua error]
+Banyak pemula membungkus error seperti `{ "status": "gagal", "msg": "User tidak ditemukan" }` tetapi tetap mengirim status HTTP **200 OK**. Akibatnya monitoring server mengira sistem 100% sehat, dan `fetch()` di frontend mengira request sukses! Gunakan 400/422 untuk input salah, 401/403 untuk masalah izin, 404 jika data tidak ada, dan 500 hanya jika server sendiri yang crash.
+:::
+
 :::latihan
 Milestone: buat CLI kecil yang memanggil API publik (mis. kurs mata uang), lalu ubah menjadi server HTTP dengan dua endpoint: `GET /health` dan `GET /kurs?dari=USD&ke=IDR`. Kembalikan 400 jika parameter kurang, dan 502 jika API sumber gagal. Uji semuanya dengan `curl -i`.
+:::
+
+:::solusi[Lihat alur penanganan error endpoint `/kurs`]
+Pecah logikanya menjadi 3 cek berurutan:
+1. Baca query `dari` dan `ke`. Jika salah satu kosong → langsung `return` status **400** dengan JSON `{ "error": "Parameter dari dan ke wajib diisi" }`.
+2. Bungkus panggilan `fetch` ke API eksternal dalam `try / catch` dengan batas waktu (`AbortSignal.timeout(5000)`). Jika gagal atau `!res.ok` → kembalikan **502 Bad Gateway**.
+3. Jika sukses → kembalikan **200 OK** beserta timestamp dan nilai tukar. Uji ketiga skenario itu memakai `curl -i "http://localhost:3000/kurs"` (tanpa query) dan `curl -i "http://localhost:3000/kurs?dari=USD&ke=IDR"`.
 :::
 
 ## Rangkuman

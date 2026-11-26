@@ -66,7 +66,7 @@ function Terminal() {
   );
 }
 
-export function Hero({ stats }: { stats: { tracks: number; repos: number; stars: number; stages: number } }) {
+export function Hero({ stats }: { stats: { tracks: number; repos: number; external?: number; stars: number; stages: number } }) {
   return (
     <section className="relative overflow-hidden">
       <div className="bg-dots absolute inset-0 [mask-image:radial-gradient(ellipse_at_70%_40%,black_20%,transparent_70%)]" />
@@ -87,26 +87,29 @@ export function Hero({ stats }: { stats: { tracks: number; repos: number; stars:
               </svg>
             </span>,</span> langsung di satu tempat.
           </h1>
-          <p style={{ "--d": "0.08s" } as CSSProperties} className="enter mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty">
-            Materi gratis terbaik dari GitHub kami pilih dan tulis ulang menjadi {stats.stages} modul berbahasa Indonesia dalam {stats.tracks} jalur, mulai dari Software Development, Data &amp; AI, hingga Jaringan, DevOps, dan Keamanan. Lengkap dengan visualisasi interaktif, kuis, dan pelacak progres. Kamu cukup belajar di sini.
+          <p style={{ "--d": "0.08s" } as CSSProperties} className="enter mt-6 max-w-xl text-base leading-relaxed text-muted text-pretty sm:text-lg">
+            Materi gratis terbaik dari GitHub, buku terbuka, dan web resmi kami rangkai menjadi {stats.stages} modul berbahasa Indonesia dalam {stats.tracks} jalur. Lengkap dengan visualisasi interaktif, Arena Game Coding, Coding Playground, Cheatsheet &amp; Flashcard, serta pelacak progres &amp; XP.
           </p>
-          <div style={{ "--d": "0.12s" } as CSSProperties} className="enter mt-8 flex flex-wrap gap-3">
-            <Link href="/jalur" className="btn btn-primary !px-6 !py-3.5 !text-base">
-              Pilih Jalur Belajar <ArrowRight className="size-5" />
+          <div style={{ "--d": "0.12s" } as CSSProperties} className="enter mt-7 flex flex-wrap gap-3 sm:mt-8">
+            <Link href="/jalur" className="btn btn-primary flex-1 !px-5 !py-3 !text-sm sm:flex-none sm:!px-6 sm:!py-3.5 sm:!text-base">
+              Pilih Jalur <ArrowRight className="size-4 sm:size-5" />
             </Link>
-            <Link href="/katalog" className="btn btn-ghost !px-6 !py-3.5 !text-base">
-              Katalog {stats.repos} Repo
+            <Link href="/game" className="btn btn-dark flex-1 !px-5 !py-3 !text-sm sm:flex-none sm:!px-6 sm:!py-3.5 sm:!text-base">
+              Main Game Coding
+            </Link>
+            <Link href="/playground" className="btn btn-ghost w-full !px-5 !py-3 !text-sm sm:w-auto sm:!px-6 sm:!py-3.5 sm:!text-base">
+              Coding Playground
             </Link>
           </div>
-          <dl style={{ "--d": "0.16s" } as CSSProperties} className="enter mt-10 grid max-w-lg grid-cols-3 divide-x-2 divide-ink/10">
+          <dl style={{ "--d": "0.16s" } as CSSProperties} className="enter mt-9 grid max-w-lg grid-cols-3 divide-x-2 divide-ink/10 sm:mt-10">
             {[
               { k: `${stats.tracks}`, v: "jalur belajar" },
               { k: `${stats.stages}`, v: "modul interaktif" },
-              { k: `${stats.repos}`, v: "repo rujukan" },
+              { k: `${stats.repos + (stats.external ?? 0)}+`, v: "repo, buku & web" },
             ].map((s) => (
-              <div key={s.v} className="px-4 first:pl-0">
-                <dt className="text-3xl font-extrabold tracking-tight">{s.k}</dt>
-                <dd className="mt-0.5 text-sm text-muted">{s.v}</dd>
+              <div key={s.v} className="px-3 first:pl-0 sm:px-4">
+                <dt className="text-2xl font-extrabold tracking-tight sm:text-3xl">{s.k}</dt>
+                <dd className="mt-0.5 text-xs text-muted sm:text-sm">{s.v}</dd>
               </div>
             ))}
           </dl>

@@ -6,23 +6,26 @@ export function Footer() {
   const sw = tracks.filter((t) => t.category === "software");
   const other = tracks.filter((t) => t.category !== "software");
   return (
-    <footer className="mt-24 border-t-2 border-ink bg-ink text-paper">
+    <footer className="mt-20 border-t-2 border-ink bg-ink pb-[calc(5.2rem+env(safe-area-inset-bottom))] text-paper sm:mt-24 lg:pb-0">
       <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="inline-flex rounded-2xl bg-cream px-3 py-2"><Logo /></div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/70">
-            Modul belajar teknologi gratis berbahasa Indonesia, disusun berurutan dari repositori GitHub terbaik.
+            Modul belajar teknologi gratis berbahasa Indonesia, disusun berurutan dari repositori GitHub, buku terbuka, dan web terbaik — lengkap dengan game coding &amp; playground.
           </p>
           <p className="mt-4 text-xs text-paper/50">Data bintang GitHub per {SNAPSHOT_DATE}.</p>
         </div>
         <FooterCol title="Software Dev" items={sw.map((t) => ({ href: `/jalur/${t.slug}`, label: t.short }))} />
         <FooterCol title="Data, AI & Jaringan" items={other.map((t) => ({ href: `/jalur/${t.slug}`, label: t.short }))} />
         <FooterCol
-          title="SatuTahu"
+          title="Fitur SatuTahu"
           items={[
-            { href: "/jalur", label: "Semua Jalur" },
-            { href: "/katalog", label: "Katalog Repo" },
-            { href: "/progres", label: "Progres Saya" },
+            { href: "/jalur", label: "Semua Jalur (19)" },
+            { href: "/game", label: "Arena Game Coding" },
+            { href: "/playground", label: "Coding Playground" },
+            { href: "/cheatsheet", label: "Cheatsheet & Flashcard" },
+            { href: "/katalog", label: "Katalog Repo, Buku & Web" },
+            { href: "/progres", label: "Progres, XP & Catatan" },
             { href: "/#faq", label: "FAQ" },
           ]}
         />

@@ -10,6 +10,8 @@ objectives:
 sources:
   - repo: enochtangg/quick-SQL-cheatsheet
     note: Rujukan sintaks query analisis
+  - repo: bellshade/SQL
+    note: Materi pembelajaran SQL berbahasa Indonesia dari dasar hingga relasi
   - repo: duckdb/duckdb
     note: Database analitik lokal untuk menjalankan contoh pada file CSV/Parquet
   - repo: awesomedata/awesome-public-datasets
@@ -183,8 +185,21 @@ Hasilnya biasanya divisualkan sebagai **tabel segitiga** (heatmap): baris = coho
 
 Metrik bisnis lain yang sering diminta: **AOV** (rata-rata nilai pesanan), **repeat purchase rate**, **churn**, **customer lifetime value** sederhana, dan **konversi funnel** (lihat → tambah ke keranjang → bayar).
 
+:::jebakan[Menulis `WHERE kolom = NULL` dan mencampur agregasi tanpa `GROUP BY`]
+Di SQL, `NULL` berarti "tidak diketahui", sehingga `NULL = NULL` hasilnya bukan `TRUE` melainkan `UNKNOWN`! Gunakan selalu `IS NULL` atau `IS NOT NULL`. Selain itu, jika kamu menulis `SELECT kota, SUM(omzet)`, kolom non-agregasi (`kota`) wajib tercantum di `GROUP BY`.
+:::
+
 :::latihan
 Milestone: dengan DuckDB pada dataset penjualan (milikmu atau publik, mis. dataset e-commerce dari awesome-public-datasets), tulis 15 query: 5 agregasi dasar, 3 JOIN, 4 window function (growth MoM, top-N per kategori, running total, kontribusi %), dan tabel cohort retensi 3 bulan. Simpan semuanya di file `.sql` dengan komentar yang menjelaskan pertanyaan bisnis setiap query.
+:::
+
+:::solusi[Pola cepat memverifikasi hasil JOIN sebelum melapor ke manajer]
+Biasakan menjalankan query cek kewarasan (*sanity check*) ini sebelum dan sesudah `JOIN`:
+```sql
+SELECT COUNT(*) AS jumlah_baris, SUM(qty * harga_satuan) AS total_omzet
+FROM penjualan;
+```
+Jika `total_omzet` tiba-tiba melonjak 2× setelah kamu menambah `LEFT JOIN`, berarti ada duplikat kunci di tabel yang di-join — segera cek relasinya dengan `GROUP BY id HAVING COUNT(*) > 1`.
 :::
 
 ## Rangkuman

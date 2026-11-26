@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import rehypeShiki from "@shikijs/rehype";
 import type { ReactNode } from "react";
-import { Lightbulb, Info, TriangleAlert, PencilLine, Sparkles, FileCode2 } from "lucide-react";
+import { Lightbulb, Info, TriangleAlert, PencilLine, Sparkles, FileCode2, ShieldAlert, Briefcase, Eye } from "lucide-react";
 import { remarkSatuTahu } from "@/lib/remark-satutahu";
 import { slugify } from "@/lib/slug";
 import { CopyButton } from "./CopyButton";
@@ -23,6 +23,8 @@ const calloutStyle: Record<string, { label: string; cls: string; Icon: typeof In
   latihan: { label: "Coba sendiri", cls: "bg-[#dff5e7] border-ink", Icon: PencilLine },
   analogi: { label: "Analogi", cls: "bg-[#f0e9ff] border-ink", Icon: Sparkles },
   contoh: { label: "Contoh", cls: "bg-paper border-ink", Icon: FileCode2 },
+  jebakan: { label: "Kesalahan umum pemula", cls: "bg-[#ffe8e6] border-ink", Icon: ShieldAlert },
+  kasus: { label: "Studi kasus nyata", cls: "bg-[#e7f4ff] border-ink", Icon: Briefcase },
 };
 
 export async function Markdown({ source }: { source: string }) {
@@ -84,6 +86,18 @@ export async function Markdown({ source }: { source: string }) {
         },
         // @ts-expect-error elemen kustom dari remarkSatuTahu
         "callout-box": ({ kind, title, children }: { kind: string; title?: string; children: ReactNode }) => {
+          if (kind === "solusi") {
+            return (
+              <details className="group my-6 rounded-xl border-2 border-ink bg-sun-50 p-4 sm:p-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-2 text-sm font-extrabold select-none">
+                  <span className="flex items-center gap-2"><Eye className="size-4" />{title || "Lihat pembahasan & kunci latihan"}</span>
+                  <span className="rounded-md border border-ink/30 bg-paper px-2 py-0.5 text-[11px] font-bold group-open:hidden">Buka</span>
+                  <span className="hidden rounded-md border border-ink/30 bg-paper px-2 py-0.5 text-[11px] font-bold group-open:inline">Tutup</span>
+                </summary>
+                <div className="mt-3 border-t-2 border-dashed border-ink/20 pt-3 text-[15.5px] [&_li]:text-[15.5px] [&_p]:my-2 [&_p]:text-[15.5px] [&_pre]:my-3">{children}</div>
+              </details>
+            );
+          }
           const s = calloutStyle[kind] ?? calloutStyle.info;
           return (
             <aside className={`my-6 rounded-xl border-2 p-4 sm:p-5 ${s.cls}`}>

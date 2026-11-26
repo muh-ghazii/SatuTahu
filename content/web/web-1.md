@@ -14,6 +14,10 @@ sources:
     note: Urutan latihan HTML/CSS/JS interaktif
   - repo: Asabeneh/30-Days-Of-JavaScript
     note: Rujukan latihan JavaScript dasar
+  - repo: bellshade/HTML-CSS
+    note: Panduan praktik HTML dan CSS berbahasa Indonesia
+  - repo: lydiahallie/javascript-questions
+    note: Soal dan pembahasan jebakan JavaScript (tersedia Bahasa Indonesia)
 quiz:
   - q: "Kamu ingin tahu kenapa sebuah tombol tidak berwarna kuning padahal kelasnya benar. Panel DevTools yang paling tepat?"
     options: ["Network", "Elements → Styles (lihat aturan yang dicoret)", "Console", "Application"]
@@ -178,8 +182,16 @@ Alur debugging yang sistematis:
 4. **Ubah satu hal**, lalu uji ulang. Mengubah lima hal sekaligus membuatmu tidak tahu mana yang memperbaiki.
 5. Setelah ketemu, **tulis test** (bila memungkinkan) agar bug yang sama tidak kembali.
 
+:::jebakan[Lupa `e.preventDefault()` pada form submit]
+Jika kamu menekan tombol Tambah dan halaman tiba-tiba me-refresh kosong padahal kode JS-mu sudah benar, cek apakah `e.preventDefault()` sudah dipanggil di event `submit`. Tanpa itu, browser menjalankan perilaku bawaan form HTML (mengirim GET request dan memuat ulang halaman).
+:::
+
 :::latihan
 Selesaikan proyek Daftar Tugas, lalu **sengaja buat 3 bug** (mis. salah nama kelas CSS, salah key localStorage, lupa `preventDefault`). Minta teman menemukannya hanya dengan DevTools, atau tukar proyek dan lakukan sebaliknya. Deploy versi akhirnya ke GitHub Pages.
+:::
+
+:::solusi[Cara menguji langsung di browser tanpa setup]
+Kamu bisa menyalin kode HTML, CSS, dan JS Daftar Tugas di atas lalu langsung memodifikasi dan melihat hasilnya secara real-time di [Coding Playground SatuTahu](/playground)! Coba tambahkan fitur filter "Belum selesai" / "Semua" sebagai tantangan bonus.
 :::
 
 ## Rangkuman

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, BookOpen, Clock, Flag } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Clock, Flag } from "lucide-react";
 import type { Track } from "@/data/types";
 import { useProgress, topicId } from "@/lib/progress";
 
@@ -74,7 +74,29 @@ export function RoadmapMap({ track, linkStages = false }: { track: Track; linkSt
           className="mt-6 grid gap-5 rounded-2xl border-2 border-ink bg-paper p-5 sm:p-6 md:grid-cols-[1.2fr_1fr]"
         >
           <div>
-            <p className="font-mono text-xs font-bold text-ink-3">TAHAP {active + 1} DARI {n}</p>
+            <div className="flex items-center justify-between gap-2">
+              <p className="font-mono text-xs font-bold text-ink-3">TAHAP {active + 1} DARI {n}</p>
+              <div className="flex items-center gap-1.5 sm:hidden">
+                <button
+                  type="button"
+                  disabled={active === 0}
+                  onClick={() => setActive((a) => Math.max(0, a - 1))}
+                  aria-label="Tahap sebelumnya"
+                  className="grid size-8 place-items-center rounded-lg border-2 border-ink bg-cream disabled:opacity-35"
+                >
+                  <ArrowLeft className="size-3.5" />
+                </button>
+                <button
+                  type="button"
+                  disabled={active === n - 1}
+                  onClick={() => setActive((a) => Math.min(n - 1, a + 1))}
+                  aria-label="Tahap berikutnya"
+                  className="grid size-8 place-items-center rounded-lg border-2 border-ink bg-sun-300 disabled:opacity-35"
+                >
+                  <ArrowRight className="size-3.5" />
+                </button>
+              </div>
+            </div>
             <h3 className="mt-1 text-xl font-extrabold">{s.title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-muted">{s.goal}</p>
             <div className="mt-4 flex items-start gap-2 rounded-xl bg-sun-100 p-3 text-sm">

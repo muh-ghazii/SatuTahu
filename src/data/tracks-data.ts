@@ -46,6 +46,7 @@ export const dataTracks: Track[] = [
         topics: ["SELECT, WHERE, GROUP BY", "JOIN multi-tabel", "Window function", "CTE", "Query untuk metrik bisnis (retensi, cohort)"],
         resources: [
           { repo: "enochtangg/quick-SQL-cheatsheet", kind: "referensi", lang: "EN", note: "Contekan SQL dengan contoh setiap perintah." },
+          { repo: "bellshade/SQL", kind: "kurikulum", lang: "ID", note: "Panduan belajar SQL berbahasa Indonesia untuk pemula sampai query relasional." },
           { repo: "duckdb/duckdb", kind: "tool", lang: "EN", note: "Database analitik yang berjalan lokal tanpa server. Ideal untuk latihan SQL pada file CSV/Parquet." },
           { repo: "awesomedata/awesome-public-datasets", kind: "awesome", lang: "EN", note: "Ratusan dataset terbuka per topik untuk bahan latihan query." },
         ],
@@ -462,6 +463,7 @@ export const dataTracks: Track[] = [
         topics: ["Cara membaca paper", "Reproduksi eksperimen", "Transformer dari nol", "Generative model (VAE, diffusion)"],
         resources: [
           { repo: "labmlai/annotated_deep_learning_paper_implementations", kind: "referensi", lang: "EN", note: "60+ paper diimplementasikan dengan catatan berdampingan. Cara terbaik belajar dari paper." },
+          { repo: "papers-we-love/papers-we-love", kind: "referensi", lang: "EN", note: "Koleksi paper klasik & penting ilmu komputer dan AI yang didiskusikan komunitas." },
           { repo: "karpathy/nanoGPT", kind: "proyek", lang: "EN", note: "Kode GPT minimal untuk dilatih dan dimodifikasi." },
           { repo: "dair-ai/ML-Papers-Explained", kind: "referensi", lang: "EN", note: "Ringkasan paper-paper kunci ML/DL." },
         ],
@@ -619,8 +621,10 @@ export const dataTracks: Track[] = [
         topics: ["Tokenisasi", "Attention & Transformer", "Pretraining vs fine-tuning", "Sampling (temperature, top-p)", "Keterbatasan & halusinasi"],
         resources: [
           { repo: "mlabonne/llm-course", kind: "kurikulum", lang: "EN", note: "Roadmap LLM tiga bagian (Fundamentals, Scientist, Engineer) dengan notebook Colab." },
+          { repo: "rohitg00/ai-engineering-from-scratch", kind: "kurikulum", lang: "EN", note: "542 pelajaran AI Engineering terbuka: fondasi model, RAG, agent runtime, dan evaluasi." },
           { repo: "rasbt/LLMs-from-scratch", kind: "buku", lang: "EN", note: "Bangun LLM mirip GPT dari nol dengan PyTorch, bab demi bab.", paidBook: true },
           { repo: "huggingface/course", kind: "kurikulum", lang: "EN", note: "Kursus resmi Hugging Face: Transformers, tokenizer, datasets, fine-tuning." },
+          { repo: "owainlewis/awesome-artificial-intelligence", kind: "awesome", lang: "EN", note: "Kurasi buku, kursus, dan panduan wajib untuk membangun sistem AI." },
         ],
         milestone: "Fine-tune model kecil untuk klasifikasi teks berbahasa Indonesia.",
       },
@@ -633,6 +637,9 @@ export const dataTracks: Track[] = [
         resources: [
           { repo: "dair-ai/Prompt-Engineering-Guide", kind: "referensi", lang: "EN", note: "Panduan prompt engineering terlengkap, termasuk riset dan contoh." },
           { repo: "microsoft/generative-ai-for-beginners", kind: "kurikulum", lang: "EN", note: "21 pelajaran membangun aplikasi Generative AI dari nol." },
+          { repo: "ashishps1/learn-ai-engineering", kind: "kurikulum", lang: "EN", note: "Kumpulan sumber gratis belajar AI, LLM, dan Agent dari nol." },
+          { repo: "ollama/ollama", kind: "tool", lang: "EN", note: "Jalankan model open-weight lokal di laptop tanpa biaya API untuk eksperimen cepat." },
+          { repo: "BerriAI/litellm", kind: "tool", lang: "EN", note: "Gateway LLM untuk memanggil 100+ provider lewat satu antarmuka API yang seragam." },
           { repo: "anthropics/claude-cookbooks", kind: "referensi", lang: "EN", note: "Resep resmi Anthropic: tool use, RAG, sub-agent, evaluasi." },
           { repo: "openai/openai-cookbook", kind: "referensi", lang: "EN", note: "Contoh & panduan resmi OpenAI untuk pola aplikasi umum." },
         ],
@@ -674,6 +681,10 @@ export const dataTracks: Track[] = [
         topics: ["Eval set & LLM-as-judge", "Caching & optimasi biaya", "Keamanan: prompt injection", "Deploy & monitoring", "Portofolio AI engineer"],
         resources: [
           { repo: "chiphuyen/aie-book", kind: "buku", lang: "EN", note: "Materi pendukung buku ‘AI Engineering’ (Chip Huyen): evaluasi, RAG, finetuning, arsitektur.", paidBook: true },
+          { repo: "vllm-project/vllm", kind: "tool", lang: "EN", note: "Engine inferensi LLM throughput tinggi standar industri untuk self-hosting." },
+          { repo: "langfuse/langfuse", kind: "tool", lang: "EN", note: "Platform open-source untuk tracing, prompt versioning, dan evaluasi aplikasi LLM." },
+          { repo: "promptfoo/promptfoo", kind: "tool", lang: "EN", note: "Tool CLI & CI untuk evaluasi prompt, RAG, dan red-teaming otomatis." },
+          { repo: "dipakkr/awesome-ai-engineering", kind: "awesome", lang: "EN", note: "Kurasi lengkap roadmap, tool, dan proyek AI Engineering produksi." },
           { repo: "Shubhamsaboo/awesome-llm-apps", kind: "proyek", lang: "EN", note: "100+ contoh aplikasi LLM, agen, dan RAG sebagai inspirasi." },
           { repo: "patchy631/ai-engineering-hub", kind: "proyek", lang: "EN", note: "Tutorial mendalam LLM, RAG, dan agen untuk kasus nyata." },
           { repo: "Hannibal046/Awesome-LLM", kind: "awesome", lang: "EN", note: "Kurasi paper, framework, dan sumber LLM." },

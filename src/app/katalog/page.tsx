@@ -3,20 +3,22 @@ import { globalStats, SNAPSHOT_DATE } from "@/data";
 import { Catalog } from "@/components/Catalog";
 
 export const metadata: Metadata = {
-  title: "Katalog Repo GitHub",
-  description: "Semua repositori GitHub gratis yang dikurasi SatuTahu: kurikulum, buku, latihan, proyek, dan tool, bisa dicari dan difilter.",
+  title: "Katalog Repo GitHub, Buku & Web Rujukan",
+  description: "Semua repositori GitHub, buku gratis, dokumentasi resmi, dan lab interaktif pilihan SatuTahu untuk seluruh 19 jalur teknologi.",
 };
 
 export default function KatalogPage() {
   const s = globalStats();
   return (
-    <div className="container-page pt-12">
-      <span className="eyebrow">Katalog</span>
-      <h1 className="mt-4 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-6xl">{s.repos} repo, semuanya gratis &amp; terverifikasi.</h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-        Cari berdasarkan topik, filter per jalur atau jenis materi. Setiap kartu memuat catatan kurator tentang cara memakainya. Jumlah bintang per {SNAPSHOT_DATE}.
+    <div className="container-page pt-8 sm:pt-12">
+      <span className="eyebrow">Katalog sumber belajar</span>
+      <h1 className="mt-4 max-w-3xl text-3xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+        {s.repos} repo GitHub + {s.external} buku &amp; web pilihan.
+      </h1>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
+        Cari berdasarkan topik, filter per jalur, bahasa (Indonesia / English), atau jenis sumber. Setiap entri memuat catatan kurator tentang cara memakainya. Snapshot bintang GitHub per {SNAPSHOT_DATE}.
       </p>
-      <div className="mt-10">
+      <div className="mt-8 sm:mt-10">
         <Catalog />
       </div>
     </div>

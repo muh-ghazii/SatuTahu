@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, BookOpenCheck, CheckCheck, Compass, FolderGit2, X, Check } from "lucide-react";
+import { ArrowRight, BookOpenCheck, CheckCheck, Code2, Compass, FileCode2, FolderGit2, Gamepad2, X, Check } from "lucide-react";
 import { foundations, globalStats, tracks as allTracks } from "@/data";
 import { Hero } from "@/components/Hero";
 import { TrackExplorer } from "@/components/TrackExplorer";
 import { RoadmapShowcase } from "@/components/RoadmapShowcase";
+import { PathFinderQuiz } from "@/components/PathFinderQuiz";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { RepoCard } from "@/components/RepoCard";
@@ -48,8 +49,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Fitur Praktik Interaktif: Game Coding, Playground, Cheatsheet */}
+      <section className="container-page pt-16 sm:pt-20">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Belajar aktif & menyenangkan"
+            title={<>Bukan cuma baca. <span className="bg-sun-300 px-2">Main &amp; praktik langsung.</span></>}
+            desc="Bangun insting ngoding lewat 4 mode game interaktif, uji kode HTML/CSS/JS langsung di browser, dan hafalkan konsep penting lewat cheatsheet & flashcard."
+          />
+        </Reveal>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <Reveal>
+            <Link href="/game" className="group card card-hover flex h-full flex-col bg-sun-100 p-6">
+              <span className="grid size-12 place-items-center rounded-xl border-2 border-ink bg-sun-400 shadow-hard-sm">
+                <Gamepad2 className="size-6" />
+              </span>
+              <h3 className="mt-4 text-xl font-extrabold">Arena Game Coding</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-2">
+                4 mode seru ramah HP: Tahu Bot (logika grid), Susun Kode (Parsons), Bug Hunter Arcade, dan SQL/Git/CSS Flexbox Quest. Raih XP &amp; lencana!
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-extrabold">Mainkan sekarang <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <Link href="/playground" className="group card card-hover flex h-full flex-col bg-paper p-6">
+              <span className="grid size-12 place-items-center rounded-xl border-2 border-ink bg-[#dff5e7] shadow-hard-sm">
+                <Code2 className="size-6" />
+              </span>
+              <h3 className="mt-4 text-xl font-extrabold">Coding Playground Live</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-2">
+                Tulis &amp; jalankan HTML, CSS, dan JavaScript langsung di browser lengkap dengan preview layar HP/desktop, console, dan tantangan berpenilai otomatis.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-extrabold">Buka Playground <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <Link href="/cheatsheet" className="group card card-hover flex h-full flex-col bg-paper p-6">
+              <span className="grid size-12 place-items-center rounded-xl border-2 border-ink bg-[#cfe3ff] shadow-hard-sm">
+                <FileCode2 className="size-6" />
+              </span>
+              <h3 className="mt-4 text-xl font-extrabold">Cheatsheet &amp; Flashcard</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-2">
+                Contekan perintah &amp; pola kode siap salin, daftar kesalahan umum pemula, plus 114 kartu flashcard interaktif untuk seluruh 19 jalur.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-extrabold">Buka Cheatsheet <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.1} className="mt-10">
+          <PathFinderQuiz />
+        </Reveal>
+      </section>
+
       {/* Jalur */}
-      <section id="jalur" className="container-page scroll-mt-24 pt-24">
+      <section id="jalur" className="container-page scroll-mt-24 pt-20 sm:pt-24">
         <Reveal>
           <SectionHeading eyebrow="Jalur belajar" title={<>Mau jadi apa? <span className="bg-sun-300 px-2">Pilih jalurnya.</span></>} desc="Setiap jalur adalah kurikulum bertahap berisi modul berbahasa Indonesia yang disusun dari repo GitHub terbaik di bidangnya, bukan sekadar daftar link." />
         </Reveal>

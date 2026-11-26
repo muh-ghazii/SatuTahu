@@ -2,13 +2,34 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Check, RotateCcw, X } from "lucide-react";
+import { Check, RotateCcw, Sparkles, X } from "lucide-react";
 import type { QuizItem } from "@/lib/modules";
+import { recordStudyAction } from "@/lib/gamification";
 
 export function Quiz({ items }: { items: QuizItem[] }) {
   const [ans, setAns] = useState<(number | null)[]>(items.map(() => null));
+  const [rewarded, setRewarded] = useState(false);
   const done = ans.filter((a) => a !== null).length;
   const score = ans.filter((a, i) => a === items[i].answer).length;
+
+  const pick = (qi: number, oi: number) => {
+    const next = ans.map((x, k) => (k === qi ? oi : x));
+    setAns(next);
+    if (!rewarded && next.every((x) => x !== null)) {
+      setRewarded(true);
+      const nextScore = next.filter((a, i) => a === items[i].answer).length;
+      const perfect = nextScore === items.length;
+      const xp = nextScore * 10 + (perfect ? 30 : 10);
+      recordStudyAction(
+        (s) => ({
+          quizzesCompleted: s.quizzesCompleted + 1,
+          perfectQuizzes: s.perfectQuizzes + (perfect ? 1 : 0),
+        }),
+        xp,
+      );
+    }
+  };
+
   return (
     <section id="kuis" className="scroll-mt-24">
       <div className="flex flex-wrap items-end justify-between gap-3">
@@ -17,8 +38,11 @@ export function Quiz({ items }: { items: QuizItem[] }) {
           <h2 className="mt-3 text-2xl font-extrabold sm:text-[28px]">Kuis singkat</h2>
         </div>
         {done > 0 && (
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-lg border-2 border-ink bg-sun-300 px-3 py-1 font-mono text-sm font-bold">{score}/{items.length} benar</span>
+            {done === items.length && rewarded && (
+              <span className="chip !bg-[#dff5e7]"><Sparkles className="size-3.5" /> +{score * 10 + (score === items.length ? 30 : 10)} XP</span>
+            )}
             <button onClick={() => setAns(items.map(() => null))} className="chip !px-3 !py-1.5 hover:bg-cream"><RotateCcw className="size-3" /> Ulangi</button>
           </div>
         )}
@@ -27,7 +51,7 @@ export function Quiz({ items }: { items: QuizItem[] }) {
         {items.map((it, qi) => {
           const a = ans[qi];
           return (
-            <li key={qi} className="card p-5">
+            <li key={qi} className="card p-4 sm:p-5">
               <p className="font-bold leading-relaxed [overflow-wrap:anywhere]"><span className="mr-2 font-mono text-ink-3">{qi + 1}.</span>{it.q}</p>
               <div className="mt-4 grid min-w-0 grid-cols-1 gap-2">
                 {it.options.map((o, oi) => {
@@ -36,8 +60,8 @@ export function Quiz({ items }: { items: QuizItem[] }) {
                     <button
                       key={oi}
                       disabled={show}
-                      onClick={() => setAns((s) => s.map((x, k) => (k === qi ? oi : x)))}
-                      className={`flex min-w-0 items-center gap-3 rounded-xl border-2 px-4 py-2.5 text-left text-[15px] transition-colors ${
+                      onClick={() => pick(qi, oi)}
+                      className={`flex min-w-0 items-center gap-3 rounded-xl border-2 px-3.5 py-3 text-left text-[15px] transition-colors sm:px-4 sm:py-2.5 ${
                         show && correct ? "border-ink bg-[#dff5e7]" : show && picked ? "border-ink bg-[#ffe4dc]" : show ? "border-line bg-paper text-muted" : "border-line bg-paper hover:border-ink hover:bg-sun-50"
                       }`}
                     >

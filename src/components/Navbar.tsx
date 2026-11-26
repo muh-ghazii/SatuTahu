@@ -10,11 +10,12 @@ import { CommandPalette } from "./CommandPalette";
 import { AccountMenu, MobileAccountLinks } from "./auth/AccountMenu";
 
 const links = [
-  { href: "/", label: "Beranda" },
-  { href: "/jalur", label: "Jalur Belajar" },
-  { href: "/katalog", label: "Katalog Repo" },
-  { href: "/progres", label: "Progres Saya" },
-  { href: "/#cara-belajar", label: "Cara Belajar" },
+  { href: "/jalur", label: "Jalur" },
+  { href: "/game", label: "Game" },
+  { href: "/playground", label: "Playground" },
+  { href: "/cheatsheet", label: "Cheatsheet" },
+  { href: "/katalog", label: "Katalog" },
+  { href: "/progres", label: "Progres" },
 ];
 
 export function Navbar() {

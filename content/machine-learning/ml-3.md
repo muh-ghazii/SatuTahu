@@ -124,8 +124,20 @@ Jaringan neural punya kapasitas sangat besar sehingga mudah menghafal data latih
 
 Resep praktis (dari Andrej Karpathy): **pertama buat model overfit pada satu batch kecil** (memastikan pipeline dan model benar), **lalu** tambahkan regularisasi sampai performa validasi optimal.
 
+:::analogi[Memahami Backpropagation seperti mencari siapa yang salah di dapur restoran]
+Bayangkan pesanan nasi goreng dikembalikan pelanggan karena terlalu asin (inilah **loss**). Kepala dapur mundur langkah demi langkah: seberapa besar pengaruh tukang aduk akhir? Seberapa besar pengaruh takaran garam di tahap sebelumnya? Setiap orang hanya perlu menyesuaikan takarannya sedikit berdasar kontribusinya terhadap rasa asin tadi (**aturan rantai / gradien**). Itulah yang dilakukan `loss.backward()` untuk jutaan bobot sekaligus.
+:::
+
+:::jebakan[Menaruh `nn.Softmax` sebelum `nn.CrossEntropyLoss`]
+Ini bug paling sering terjadi pada pemula PyTorch: `nn.CrossEntropyLoss()` di PyTorch **sudah mengandung `LogSoftmax` di dalamnya**. Jika lapisan terakhir modelmu memakai `nn.Softmax()`, model akan terkena softmax dua kali sehingga training melambat drastis dan probabilitas jadi melenceng. Biarkan lapisan terakhir mengeluarkan **logits mentah**!
+:::
+
 :::latihan
 Milestone: latih MLP PyTorch pada dataset Fashion-MNIST (60.000 gambar 28×28, 10 kelas). Mulai dengan overfit satu batch, lalu latih penuh dengan plot loss latih/validasi; bandingkan tanpa regularisasi vs dengan dropout + weight decay + early stopping. Laporkan akurasi test dan tampilkan 10 contoh salah klasifikasi beserta analisisnya.
+:::
+
+:::solusi[Checklist debugging jika akurasi macet di ~10% (tebakan acak)]
+Jika akurasi 10 kelas macet di 10%: (1) pastikan input piksel sudah dinormalisasi dari `0..255` ke `0..1`, (2) cek apakah `opt.zero_grad()` ada di dalam loop batch, (3) pastikan tidak ada `Softmax` di lapisan output, (4) coba ubah learning rate dari `1e-1` ke `1e-3`, dan (5) cetak `xb.shape` untuk memastikan dimensi flatten (`batch, 784`) sesuai `d_in`.
 :::
 
 ## Rangkuman

@@ -3,19 +3,26 @@ import "./globals.css";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { MobileNav } from "@/components/MobileNav";
+import { PwaRegister } from "@/components/PwaRegister";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
-    default: "SatuTahu: Belajar Teknologi Gratis, Modul Berbahasa Indonesia",
+    default: "SatuTahu: Belajar Teknologi Gratis, Modul & Game Coding Berbahasa Indonesia",
     template: "%s · SatuTahu",
   },
   description:
-    "Modul belajar Software Development, Data & AI, Jaringan, DevOps, Cyber Security, dan IoT yang disusun dari repositori GitHub terbaik. Gratis, bertahap, interaktif, dan berbahasa Indonesia.",
-  keywords: ["belajar coding gratis", "roadmap programmer", "machine learning", "data science", "frontend", "backend", "github", "bahasa indonesia"],
+    "Platform belajar teknologi gratis berbahasa Indonesia: 19 jalur, 100 modul interaktif, Arena Game Coding, Coding Playground, Cheatsheet & Flashcard, serta 340+ rujukan GitHub, buku & web.",
+  keywords: ["belajar coding gratis", "roadmap programmer", "game coding", "machine learning", "data science", "frontend", "backend", "github", "bahasa indonesia"],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "SatuTahu",
+  },
   openGraph: {
-    title: "SatuTahu: Belajar Teknologi Gratis, Modul Berbahasa Indonesia",
-    description: "19 jalur, 100 modul interaktif berbahasa Indonesia, sumber asli tetap dikreditkan.",
+    title: "SatuTahu: Belajar Teknologi Gratis, Modul & Game Coding Berbahasa Indonesia",
+    description: "19 jalur, 100 modul interaktif, Arena Game Coding, Coding Playground, dan rujukan GitHub, buku & web.",
     images: ["/logo.png"],
     locale: "id_ID",
     type: "website",
@@ -24,6 +31,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#fec536",
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -37,6 +45,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Navbar />
           <main id="konten" className="flex-1">{children}</main>
           <Footer />
+          <MobileNav />
+          <PwaRegister />
         </AuthProvider>
       </body>
     </html>

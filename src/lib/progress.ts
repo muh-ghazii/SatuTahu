@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { recordStudyAction } from "./gamification";
 
 /** Progres disimpan per jalur: daftar id topik "stageId:index" yang sudah dicentang */
 export type ProgressState = Record<string, string[]>;
@@ -61,16 +62,31 @@ export function useProgress() {
   const toggle = (track: string, id: string) => {
     const cur = read();
     const list = new Set(cur[track] ?? []);
-    if (list.has(id)) list.delete(id);
-    else list.add(id);
+    const adding = !list.has(id);
+    if (adding) list.add(id);
+    else list.delete(id);
     write({ ...cur, [track]: [...list] });
+    if (adding) {
+      recordStudyAction((s) => ({ topicsCheckedTotal: s.topicsCheckedTotal + 1 }), 15);
+    }
   };
 
   const setMany = (track: string, ids: string[], done: boolean) => {
     const cur = read();
     const list = new Set(cur[track] ?? []);
-    ids.forEach((id) => (done ? list.add(id) : list.delete(id)));
+    let added = 0;
+    ids.forEach((id) => {
+      if (done) {
+        if (!list.has(id)) added++;
+        list.add(id);
+      } else {
+        list.delete(id);
+      }
+    });
     write({ ...cur, [track]: [...list] });
+    if (added > 0) {
+      recordStudyAction((s) => ({ topicsCheckedTotal: s.topicsCheckedTotal + added }), added * 15);
+    }
   };
 
   const reset = (track?: string) => {

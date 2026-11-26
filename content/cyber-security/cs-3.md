@@ -15,6 +15,8 @@ sources:
     note: Web Security Testing Guide
   - repo: OWASP/ASVS
     note: Application Security Verification Standard
+  - repo: swisskyrepo/PayloadsAllTheThings
+    note: Referensi pola serangan & bypass untuk memahami mekanisme kerentanan web
   - repo: paragonie/awesome-appsec
     note: Kumpulan sumber keamanan aplikasi
 quiz:
@@ -146,8 +148,20 @@ Set-Cookie: sid=9f8a…; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
 
 Implementasi lengkap di sisi server dibahas di [Keamanan aplikasi backend](/belajar/backend/be-4).
 
+:::kasus[Kenapa UUID saja tidak menyelesaikan IDOR]
+Sebuah aplikasi tagihan mengganti `/api/invoice/1042` menjadi `/api/invoice/f47ac10b-58cc-...` dengan harapan tidak bisa ditebak. Namun URL tersebut tetap bisa bocor lewat riwayat browser, log server, header Referer, atau tautan yang dibagikan. Tanpa pemeriksaan `invoice.owner_id == current_user.id` di server, siapa pun yang memiliki UUID itu tetap bisa membukanya. Obfuskasi ≠ otorisasi!
+:::
+
 :::latihan
 Milestone: jalankan OWASP Juice Shop secara lokal (Docker). Selesaikan minimal 10 tantangan yang mencakup injection, XSS, broken access control, dan autentikasi. Untuk setiap tantangan, tulis: kategori Top 10, akar masalah, dan perbaikan di level kode. Lalu audit satu aplikasi web milikmu dengan checklist ASVS level 1 (bagian autentikasi, sesi, access control, validasi) dan perbaiki minimal 3 temuan.
+:::
+
+:::solusi[Perintah Docker cepat untuk menyalakan OWASP Juice Shop]
+Jalankan lab legal di laptopmu sendiri dalam satu baris:
+```bash
+docker run --rm -p 3000:3000 bkimminich/juice-shop
+```
+Buka `http://localhost:3000`. Jangan lupa akses halaman `/#/score-board` (temukan dulu jalurnya lewat DevTools!) untuk melacak semua tantangan secara terstruktur.
 :::
 
 ## Rangkuman

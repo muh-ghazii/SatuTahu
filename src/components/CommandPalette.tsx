@@ -3,21 +3,30 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { BookOpen, CornerDownLeft, Search, Star } from "lucide-react";
-import { buildCatalog, formatStars, repoUrl, tracks } from "@/data";
+import { BookMarked, BookOpen, Code2, CornerDownLeft, FileCode2, Gamepad2, Search, Star } from "lucide-react";
+import { buildCatalog, externalSources, formatStars, repoUrl, tracks } from "@/data";
 import { GitHubMark, TrackIcon } from "./icons";
 
 type Item =
+  | { type: "feature"; id: string; title: string; sub: string; href: string }
   | { type: "track"; id: string; title: string; sub: string; icon: string; href: string }
   | { type: "stage"; id: string; title: string; sub: string; href: string }
+  | { type: "external"; id: string; title: string; sub: string; href: string }
   | { type: "repo"; id: string; title: string; sub: string; stars: number; href: string };
 
 const catalog = buildCatalog();
+const featureItems: Item[] = [
+  { type: "feature", id: "game", title: "Arena Game Coding", sub: "Tahu Bot, Susun Kode, Bug Hunter & SQL/Git/CSS Quest", href: "/game" },
+  { type: "feature", id: "playground", title: "Coding Playground Live", sub: "Tulis & jalankan HTML, CSS, JavaScript + tantangan otomatis", href: "/playground" },
+  { type: "feature", id: "cheatsheet", title: "Cheatsheet & Flashcard 19 Jalur", sub: "Contekan syntax, perintah, jebakan pemula & 114 flashcard", href: "/cheatsheet" },
+];
 const allItems: Item[] = [
+  ...featureItems,
   ...tracks.map((t) => ({ type: "track" as const, id: t.slug, title: t.name, sub: t.tagline, icon: t.icon, href: `/jalur/${t.slug}` })),
   ...tracks.flatMap((t) =>
     t.stages.map((s) => ({ type: "stage" as const, id: s.id, title: s.title, sub: `Modul ${t.short} · ${s.topics.join(", ")}`, href: `/belajar/${t.slug}/${s.id}` })),
   ),
+  ...externalSources.map((e) => ({ type: "external" as const, id: e.id, title: e.title, sub: `${e.author} · ${e.note}`, href: e.url })),
   ...catalog.map((c) => ({ type: "repo" as const, id: c.repo, title: c.repo, sub: c.note, stars: c.stars, href: repoUrl(c.repo) })),
 ];
 
@@ -64,7 +73,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
 
   const go = (item: Item) => {
     onClose();
-    if (item.type === "repo") window.open(item.href, "_blank", "noopener,noreferrer");
+    if (item.type === "repo" || item.type === "external") window.open(item.href, "_blank", "noopener,noreferrer");
     else router.push(item.href);
   };
 
@@ -112,8 +121,12 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
                     className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-colors ${active === idx ? "bg-sun-100" : ""}`}
                   >
                     <span className="grid size-9 shrink-0 place-items-center rounded-lg border-[1.5px] border-ink bg-paper">
+                      {item.type === "feature" && item.id === "game" && <Gamepad2 className="size-4" />}
+                      {item.type === "feature" && item.id === "playground" && <Code2 className="size-4" />}
+                      {item.type === "feature" && item.id === "cheatsheet" && <FileCode2 className="size-4" />}
                       {item.type === "track" && <TrackIcon name={item.icon} className="size-4" />}
                       {item.type === "stage" && <BookOpen className="size-4" />}
+                      {item.type === "external" && <BookMarked className="size-4" />}
                       {item.type === "repo" && <GitHubMark className="size-4" />}
                     </span>
                     <span className="min-w-0 flex-1">

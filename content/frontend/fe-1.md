@@ -14,6 +14,8 @@ sources:
     note: Rujukan definisi elemen HTML, properti CSS, dan HTTP
   - repo: TheOdinProject/curriculum
     note: Pendekatan berbasis proyek di bagian Foundations
+  - repo: bellshade/HTML-CSS
+    note: Referensi praktik HTML dan CSS berbahasa Indonesia dari komunitas Bellshade
 quiz:
   - q: "Mana markup yang paling tepat untuk menu navigasi utama situs?"
     options: ["<div class=\"menu\">", "<nav> berisi <ul> dan <a>", "<section id=\"nav\">", "<span> untuk setiap tautan"]
@@ -182,8 +184,34 @@ git push -u origin main
 
 Bonus untuk frontend: **GitHub Pages** bisa menayangkan situs statis gratis. Buka *Settings → Pages* di repo, pilih branch `main`, dan situsmu tayang di `username.github.io/toko-seragam`. Pembahasan Git yang lebih dalam (branch, merge, konflik, PR) ada di modul Terminal, Git & GitHub pada jalur Fondasi CS.
 
+:::jebakan[Lupa `box-sizing: border-box` dan `meta viewport`]
+Dua sumber utama layout "berantakan di HP":
+1. Tanpa `* { box-sizing: border-box; }`, elemen `width: 100%` yang diberi `padding: 16px` akan meluber selebar `100% + 32px` dan memunculkan scrollbar horizontal.
+2. Tanpa `<meta name="viewport" content="width=device-width, initial-scale=1">`, browser HP mengira halamanmu desktop 980px lalu mengecilkannya hingga teks tak terbaca.
+:::
+
+:::kasus[Mendesain katalog UMKM yang enak dibuka di HP murah]
+Di Indonesia, mayoritas pembeli membuka tautan toko dari WhatsApp di layar 360px–390px dengan koneksi 4G tidak stabil. Mulai desain dari 1 kolom penuh, pakai `loading="lazy"` pada gambar katalog di bawah lipatan layar, dan pastikan tombol "Pesan via WA" tingginya minimal `44px` agar mudah ditekan jempol.
+:::
+
 :::latihan
 Kerjakan milestone tahap ini: landing page usaha lokal dengan `header`, `nav`, `main`, `footer`; satu bagian katalog memakai Grid; responsif 1→2→3 kolom; semua gambar punya `alt`. Jalankan **Lighthouse** di DevTools dan perbaiki sampai skor Accessibility dan Performance ≥ 90.
+:::
+
+:::solusi[Lihat kerangka CSS responsif & checklist Lighthouse]
+Gunakan pola starter CSS ini (bisa langsung dicoba di [Coding Playground](/playground)!):
+
+```css
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+
+.katalog {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+```
+Checklist cepat Lighthouse ≥ 90: (1) kontras teks vs latar ≥ 4.5:1, (2) semua `<img>` punya `alt` & ukuran `width`/`height` eksplisit agar tidak terjadi *layout shift* (CLS), (3) hanya ada satu `<h1>` dan urutan heading tidak melompat.
 :::
 
 ## Rangkuman

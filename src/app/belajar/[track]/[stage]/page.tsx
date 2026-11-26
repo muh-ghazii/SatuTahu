@@ -3,14 +3,15 @@ import { Suspense } from "react";
 import { LessonSkeleton } from "@/components/Skeletons";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, BookOpen, Clock, Flag, Layers, ListChecks, Target } from "lucide-react";
-import { getTrack, repoUrl } from "@/data";
+import { ArrowLeft, ArrowRight, BookMarked, BookOpen, Clock, Flag, Layers, ListChecks, Target } from "lucide-react";
+import { getTrack, repoUrl, sourcesForTrack } from "@/data";
 import { allModuleParams, getModule } from "@/lib/modules";
 import { Markdown } from "@/components/lesson/Markdown";
 import { Quiz } from "@/components/lesson/Quiz";
 import { Toc } from "@/components/lesson/Toc";
 import { LessonChecklist, ModuleNav } from "@/components/lesson/LessonProgress";
 import { ReadingProgress } from "@/components/lesson/ReadingProgress";
+import { StudyToolbar } from "@/components/lesson/StudyToolbar";
 import { GitHubMark, TrackIcon } from "@/components/icons";
 
 export function generateStaticParams() {
@@ -42,6 +43,7 @@ async function LessonContent({ params }: { params: PageProps<"/belajar/[track]/[
   const stage = t.stages[idx];
   const prev = t.stages[idx - 1];
   const next = t.stages[idx + 1];
+  const extSources = sourcesForTrack(t.slug).slice(0, 4);
 
   return (
     <>
@@ -65,18 +67,15 @@ async function LessonContent({ params }: { params: PageProps<"/belajar/[track]/[
         </div>
       </header>
 
-      <div className="container-page grid gap-10 pt-10 lg:grid-cols-[250px_minmax(0,1fr)] xl:grid-cols-[250px_minmax(0,1fr)_210px]">
-        <aside aria-label="Daftar modul" className="hidden lg:block">
+      <div id="lesson-shell" className="container-page grid gap-8 pt-6 sm:pt-10 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-10 xl:grid-cols-[250px_minmax(0,1fr)_210px]">
+        <aside aria-label="Daftar modul" className="lesson-sidebar hidden lg:block">
           <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-1 pb-6">
             <ModuleNav track={t} current={stageId} />
           </div>
         </aside>
 
         <article className="min-w-0">
-          <details className="card mb-8 p-4 lg:hidden">
-            <summary className="cursor-pointer text-sm font-extrabold">Daftar modul {t.short}</summary>
-            <div className="mt-3"><ModuleNav track={t} current={stageId} label="Daftar modul (seluler)" /></div>
-          </details>
+          <StudyToolbar track={t} stageId={stageId} title={m.title} toc={m.toc} />
 
           {m.objectives.length > 0 && (
             <div className="card mb-10 p-5">
@@ -101,18 +100,37 @@ async function LessonContent({ params }: { params: PageProps<"/belajar/[track]/[
 
           {m.quiz.length > 0 && <div className="mt-14"><Quiz items={m.quiz} /></div>}
 
-          {m.sources.length > 0 && (
-            <section className="mt-14 rounded-2xl border-2 border-dashed border-ink/40 p-5">
-              <p className="text-sm font-extrabold">Sumber & kredit</p>
-              <p className="mt-1 text-sm text-muted">Modul ini ditulis ulang dalam Bahasa Indonesia oleh SatuTahu dengan merujuk materi terbuka berikut. Hak cipta dan lisensi materi asli tetap milik pembuatnya.</p>
-              <ul className="mt-3 space-y-2">
-                {m.sources.map((s) => (
-                  <li key={s.repo} className="flex items-start gap-2 text-sm">
-                    <GitHubMark className="mt-0.5 size-4 shrink-0" />
-                    <span className="min-w-0"><a href={repoUrl(s.repo)} target="_blank" rel="noopener noreferrer" className="font-mono font-bold [overflow-wrap:anywhere] hover:underline">{s.repo}</a>: <span className="text-muted">{s.note}</span></span>
-                  </li>
-                ))}
-              </ul>
+          {(m.sources.length > 0 || extSources.length > 0) && (
+            <section className="mt-14 space-y-5 rounded-2xl border-2 border-dashed border-ink/40 p-5">
+              {m.sources.length > 0 && (
+                <div>
+                  <p className="text-sm font-extrabold">Sumber GitHub &amp; kredit</p>
+                  <p className="mt-1 text-sm text-muted">Modul ini ditulis ulang dalam Bahasa Indonesia oleh SatuTahu dengan merujuk materi terbuka berikut. Hak cipta dan lisensi materi asli tetap milik pembuatnya.</p>
+                  <ul className="mt-3 space-y-2">
+                    {m.sources.map((s) => (
+                      <li key={s.repo} className="flex items-start gap-2 text-sm">
+                        <GitHubMark className="mt-0.5 size-4 shrink-0" />
+                        <span className="min-w-0"><a href={repoUrl(s.repo)} target="_blank" rel="noopener noreferrer" className="font-mono font-bold [overflow-wrap:anywhere] hover:underline">{s.repo}</a>: <span className="text-muted">{s.note}</span></span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {extSources.length > 0 && (
+                <div className={m.sources.length > 0 ? "border-t-2 border-dashed border-line pt-4" : ""}>
+                  <p className="flex items-center gap-1.5 text-sm font-extrabold"><BookMarked className="size-4" /> Buku &amp; web rujukan lanjutan ({t.short})</p>
+                  <ul className="mt-2.5 space-y-2">
+                    {extSources.map((src) => (
+                      <li key={src.id} className="text-sm">
+                        <a href={src.url} target="_blank" rel="noopener noreferrer" className="font-bold underline decoration-sun-400 decoration-2 underline-offset-2 hover:bg-sun-100">
+                          {src.title} ↗
+                        </a>{" "}
+                        <span className="text-xs text-muted">({src.author}) — {src.note}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </section>
           )}
 
@@ -132,7 +150,7 @@ async function LessonContent({ params }: { params: PageProps<"/belajar/[track]/[
           </nav>
         </article>
 
-        <aside aria-label="Daftar isi modul" className="hidden xl:block">
+        <aside aria-label="Daftar isi modul" className="lesson-toc hidden xl:block">
           <div className="sticky top-24"><Toc items={m.toc} /></div>
         </aside>
       </div>

@@ -12,6 +12,8 @@ sources:
     note: Urutan topik pengantar ilmu komputer
   - repo: jwasham/coding-interview-university
     note: Daftar konsep representasi data dan cara kerja komputer
+  - repo: mtdvio/every-programmer-should-know
+    note: Konsep fundamental komputer, representasi angka, dan encoding yang wajib diketahui developer
 quiz:
   - q: "Berapa nilai desimal dari bilangan biner 00001011?"
     options: ["9", "11", "13", "1011"]
@@ -170,8 +172,28 @@ while saldo < 150_000:
 print(bulan)               # 9
 ```
 
+:::jebakan[Terjebak di "Tutorial Hell" & menganggap tipe data tidak penting]
+Dua hal yang paling sering membuat pemula berhenti di minggu pertama: (1) hanya menonton tutorial tanpa mengetik ulang kode, dan (2) bingung kenapa `"10" + "5"` menghasilkan `"105"` alih-alih `15`. Selalu cek `type(variabel)` saat hasil perhitungan tampak aneh, dan biasakan menulis 1 program kecil setiap selesai membaca satu sub-bab.
+:::
+
 :::latihan
 Tulis program yang mencetak angka 1–30, tetapi ganti kelipatan 3 dengan `Fizz`, kelipatan 5 dengan `Buzz`, dan kelipatan keduanya dengan `FizzBuzz`. Petunjuk: gunakan `%` untuk mengecek kelipatan, dan pikirkan urutan `if` yang benar.
+:::
+
+:::solusi[Lihat pembahasan & contoh solusi FizzBuzz]
+Kunci utamanya adalah **mengecek kelipatan 3 DAN 5 (yaitu 15) lebih dulu**. Jika kamu mengecek `% 3 == 0` lebih dulu, angka `15` akan berhenti di cabang `"Fizz"` dan tidak pernah sampai ke `"FizzBuzz"`.
+
+```python
+for angka in range(1, 31):
+    if angka % 15 == 0:
+        print("FizzBuzz")
+    elif angka % 3 == 0:
+        print("Fizz")
+    elif angka % 5 == 0:
+        print("Buzz")
+    else:
+        print(angka)
+```
 :::
 
 ## Rangkuman

@@ -3,14 +3,15 @@ import { Suspense } from "react";
 import { TrackSkeleton } from "@/components/Skeletons";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Briefcase, Clock, Lightbulb, Signal, Star, Wrench } from "lucide-react";
-import { formatStars, getTrack, trackStats, tracks } from "@/data";
+import { ArrowLeft, ArrowRight, BookMarked, Briefcase, Clock, FileCode2, Lightbulb, ShieldAlert, Signal, Sparkles, Star, Wrench } from "lucide-react";
+import { formatStars, getTrack, getTrackGuide, sourcesForTrack, trackStats, tracks } from "@/data";
 import { TrackIcon, GitHubMark } from "@/components/icons";
 import { ConceptFlow } from "@/components/ConceptFlow";
 import { RoadmapMap } from "@/components/RoadmapMap";
 import { StageNav, StageSection } from "@/components/StageSection";
 import { TrackProgressCard } from "@/components/TrackProgress";
 import { TrackCard } from "@/components/TrackCard";
+import { ExternalSourceCard } from "@/components/Catalog";
 import { Reveal } from "@/components/Reveal";
 
 export function generateStaticParams() {
@@ -38,6 +39,8 @@ async function TrackContent({ params }: { params: PageProps<"/jalur/[slug]">["pa
   if (!t) notFound();
   const s = trackStats(t);
   const related = t.related.map((r) => getTrack(r)!).filter(Boolean);
+  const guide = getTrackGuide(t.slug);
+  const extSources = sourcesForTrack(t.slug);
 
   return (
     <>
@@ -99,6 +102,47 @@ async function TrackContent({ params }: { params: PageProps<"/jalur/[slug]">["pa
           <h2 className="mb-5 text-2xl font-extrabold sm:text-3xl">Pahami gambaran besarnya</h2>
           <ConceptFlow {...t.concept} />
         </Reveal>
+
+        {guide && (
+          <Reveal delay={0.08} className="mt-12">
+            <div className="grid gap-5 lg:grid-cols-2">
+              <div className="card bg-sun-50 p-5 sm:p-6">
+                <p className="flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-ink-3 uppercase">
+                  <Sparkles className="size-4" /> Analogi mudah untuk pemula
+                </p>
+                <p className="mt-3 text-[15.5px] leading-relaxed text-ink">{guide.analogy}</p>
+                <div className="mt-4 rounded-xl border-2 border-ink/20 bg-paper p-3.5 text-sm leading-relaxed text-ink-2">
+                  <span className="font-extrabold text-ink">Tips fokus belajar: </span>
+                  {guide.focusTip}
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Link href={`/cheatsheet?jalur=${t.slug}`} className="btn btn-primary !px-4 !py-2 !text-xs">
+                    <FileCode2 className="size-4" /> Buka Cheatsheet &amp; Flashcard {t.short}
+                  </Link>
+                  <Link href="/game" className="btn btn-ghost !px-4 !py-2 !text-xs">
+                    Latihan di Arena Game
+                  </Link>
+                </div>
+              </div>
+
+              <div className="card bg-paper p-5 sm:p-6">
+                <p className="flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] text-[#b4362c] uppercase">
+                  <ShieldAlert className="size-4" /> Kesalahan umum pemula &amp; solusinya
+                </p>
+                <ul className="mt-3 space-y-3">
+                  {guide.mistakes.map((m, idx) => (
+                    <li key={idx} className="rounded-xl border-2 border-line bg-cream/60 p-3 text-sm">
+                      <p className="font-bold text-ink">✗ {m.wrong}</p>
+                      <p className="mt-1 text-ink-2">
+                        <span className="font-bold text-[#1d7a46]">✓ Solusi:</span> {m.fix}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        )}
       </section>
 
       {/* Stages */}
@@ -118,6 +162,29 @@ async function TrackContent({ params }: { params: PageProps<"/jalur/[slug]">["pa
           </div>
         </div>
       </section>
+
+      {/* Buku & Web Pilihan */}
+      {extSources.length > 0 && (
+        <section className="container-page pt-20">
+          <Reveal>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-xl border-2 border-ink bg-[#cfe3ff]"><BookMarked className="size-5" /></span>
+                <div>
+                  <h2 className="text-2xl font-extrabold sm:text-3xl">Buku &amp; website rujukan terbaik</h2>
+                  <p className="mt-1 text-sm text-muted">Pelengkap modul SatuTahu dari buku klasik gratis, dokumentasi resmi, dan lab interaktif.</p>
+                </div>
+              </div>
+              <Link href="/katalog" className="inline-flex items-center gap-1 text-sm font-bold hover:underline">Lihat semua katalog <ArrowRight className="size-4" /></Link>
+            </div>
+          </Reveal>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {extSources.map((src) => (
+              <ExternalSourceCard key={src.id} source={src} showTracks={false} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Projects */}
       <section className="container-page pt-20">

@@ -52,10 +52,12 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: clip;
   }
   body {
     @apply bg-cream text-ink font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
+    overflow-x: clip;
   }
   ::selection {
     @apply bg-sun-300 text-ink;
@@ -128,6 +130,28 @@
   }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { scrollbar-width: none; }
+}
+
+/* Mode baca & mode fokus untuk halaman modul */
+#lesson-shell[data-font-size="sm"] .lesson-body p,
+#lesson-shell[data-font-size="sm"] .lesson-body li {
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+#lesson-shell[data-font-size="lg"] .lesson-body p,
+#lesson-shell[data-font-size="lg"] .lesson-body li {
+  font-size: 18.5px;
+  line-height: 1.9;
+}
+@media (min-width: 1024px) {
+  #lesson-shell[data-focus="true"] {
+    grid-template-columns: minmax(0, 780px);
+    justify-content: center;
+  }
+  #lesson-shell[data-focus="true"] .lesson-sidebar,
+  #lesson-shell[data-focus="true"] .lesson-toc {
+    display: none;
+  }
 }
 
 /* Animasi masuk berbasis CSS: berjalan tanpa menunggu JavaScript, jadi konten tidak pernah ‘kosong’. */

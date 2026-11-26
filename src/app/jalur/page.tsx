@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { categories, trackStats, tracks } from "@/data";
 import { TrackCard } from "@/components/TrackCard";
+import { PathFinderQuiz } from "@/components/PathFinderQuiz";
 import { Reveal } from "@/components/Reveal";
 import { TrackIcon } from "@/components/icons";
 
@@ -15,9 +16,13 @@ export default function JalurPage() {
     <div className="container-page pt-12 pb-8">
       <Reveal>
         <span className="eyebrow">Jalur belajar</span>
-        <h1 className="mt-4 max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-6xl">{tracks.length} jalur, satu prinsip: belajar berurutan, bukan menumpuk link.</h1>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Bingung memilih? Lihat tabel perbandingan di bawah, lalu cek peran kerja yang paling sesuai dengan minatmu.</p>
+        <h1 className="mt-4 max-w-3xl text-3xl leading-[1.08] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">{tracks.length} jalur, satu prinsip: belajar berurutan, bukan menumpuk link.</h1>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">Bingung memilih? Ikuti tes rekomendasi 1 menit di bawah atau bandingkan tiap jalur berdasarkan level, durasi, dan peran kerjanya.</p>
       </Reveal>
+
+      <div className="mt-8 sm:mt-10">
+        <PathFinderQuiz />
+      </div>
 
       {categories.map((c) => (
         <section key={c.id} className="mt-16">

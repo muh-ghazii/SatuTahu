@@ -35,6 +35,7 @@ export const extraTracks: Track[] = [
         resources: [
           { repo: "ossu/computer-science", kind: "kurikulum", lang: "EN", note: "Kurikulum ilmu komputer setara S1. Bagian ‘Intro CS’ menjadi acuan urutan materi modul ini." },
           { repo: "jwasham/coding-interview-university", kind: "kurikulum", lang: "EN", note: "Daftar konsep dasar CS yang dirujuk untuk representasi data & cara kerja komputer." },
+          { repo: "mtdvio/every-programmer-should-know", kind: "referensi", lang: "EN", note: "Kumpulan konsep penting yang wajib dipahami developer dari nol hingga mahir." },
         ],
         milestone: "Menulis pseudocode & flowchart untuk 3 masalah sehari-hari (mis. menghitung kembalian).",
       },
@@ -283,6 +284,7 @@ export const extraTracks: Track[] = [
           { repo: "OWASP/Top10", kind: "referensi", lang: "EN", note: "Daftar resmi OWASP Top 10 yang menjadi kerangka modul." },
           { repo: "OWASP/wstg", kind: "referensi", lang: "EN", note: "Web Security Testing Guide: metodologi pengujian per kategori." },
           { repo: "OWASP/ASVS", kind: "referensi", lang: "EN", note: "Standar verifikasi keamanan aplikasi untuk checklist." },
+          { repo: "swisskyrepo/PayloadsAllTheThings", kind: "referensi", lang: "EN", note: "Referensi payload & teknik bypass keamanan web untuk memahami cara kerja celah dan pertahanannya." },
           { repo: "paragonie/awesome-appsec", kind: "awesome", lang: "EN", note: "Kurasi bacaan keamanan aplikasi." },
         ],
         milestone: "Audit aplikasi buatanmu sendiri terhadap OWASP Top 10 dan perbaiki temuan.",
@@ -309,6 +311,7 @@ export const extraTracks: Track[] = [
         resources: [
           { repo: "juice-shop/juice-shop", kind: "latihan", lang: "EN", note: "Aplikasi rentan resmi OWASP untuk berlatih secara legal." },
           { repo: "digininja/DVWA", kind: "latihan", lang: "EN", note: "Damn Vulnerable Web App, lab lokal untuk belajar kerentanan web." },
+          { repo: "danielmiessler/SecLists", kind: "tool", lang: "EN", note: "Kumpulan wordlist standar industri untuk pengujian keamanan legal & CTF." },
           { repo: "ctf-wiki/ctf-wiki", kind: "referensi", lang: "EN", note: "Wiki pembelajaran CTF." },
           { repo: "apsdehal/awesome-ctf", kind: "awesome", lang: "EN", note: "Kurasi tool & platform CTF." },
         ],
