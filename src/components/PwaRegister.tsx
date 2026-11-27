@@ -61,7 +61,7 @@ export function PwaRegister() {
   if (dismissed || (!deferred && !showIosHint)) return null;
 
   return (
-    <div className="fixed right-3 bottom-[76px] left-3 z-40 mx-auto max-w-md lg:right-5 lg:bottom-5 lg:left-auto">
+    <div className="fixed right-3 bottom-[76px] left-3 z-40 mx-auto max-w-md lg:hidden">
       <div className="card flex items-center gap-3 bg-sun-100 p-3 shadow-hard">
         <span className="grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink bg-sun-400">
           <Smartphone className="size-5" />

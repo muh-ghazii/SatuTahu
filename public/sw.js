@@ -1,4 +1,4 @@
-const CACHE_NAME = "satutahu-v2";
+const CACHE_NAME = "satutahu-v3";
 const SHELL_ASSETS = ["/", "/jalur", "/game", "/playground", "/cheatsheet", "/logo.png", "/mascot.png"];
 
 self.addEventListener("install", (event) => {
@@ -24,7 +24,7 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
-  if (url.pathname.startsWith("/auth/")) return;
+  if (url.pathname.startsWith("/auth/") || url.searchParams.has("code") || url.searchParams.has("token_hash")) return;
 
   // Network-first agar materi terbaru selalu tampil; fallback ke cache saat offline
   event.respondWith(

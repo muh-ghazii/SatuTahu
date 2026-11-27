@@ -45,6 +45,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [lastSyncedAt, setLastSyncedAt] = useState<Date | null>(null);
 
   const uidRef = useRef<string | null>(null);
+  const exchangedCodeRef = useRef<string | null>(null);
   const syncing = useRef(false);
   const pending = useRef(false);
   const applying = useRef(false);
@@ -97,20 +98,53 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     timer.current = setTimeout(() => void syncOnce(), 900);
   }, [syncOnce]);
 
-  // Status login
+  // Status login + fallback penukaran ?code=... jika Supabase mengarahkan ke Site URL (/) alih-alih /auth/callback
   useEffect(() => {
     const sb = getSupabase();
     if (!sb) return;
-    const { data: sub } = sb.auth.onAuthStateChange((_event, session) => {
-      const next = session?.user ?? null;
+    let alive = true;
+
+    const applySession = (next: User | null) => {
+      if (!alive) return;
       const changed = next?.id !== uidRef.current;
       uidRef.current = next?.id ?? null;
       setUser(next);
       setLoading(false);
       if (next && changed) void syncOnce();
       if (!next) setSyncStatus("idle");
+    };
+
+    const { data: sub } = sb.auth.onAuthStateChange((_event, session) => {
+      applySession(session?.user ?? null);
     });
-    return () => sub.subscription.unsubscribe();
+
+    void (async () => {
+      try {
+        const url = new URL(window.location.href);
+        const code = url.searchParams.get("code");
+        if (code && !url.pathname.startsWith("/auth/") && exchangedCodeRef.current !== code) {
+          exchangedCodeRef.current = code;
+          url.searchParams.delete("code");
+          window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+          const { data, error } = await sb.auth.exchangeCodeForSession(code);
+          if (!error && data.session?.user) {
+            applySession(data.session.user);
+            return;
+          }
+          if (error) console.warn("[SatuTahu] Gagal menukar kode login:", error);
+        }
+        const { data } = await sb.auth.getSession();
+        applySession(data.session?.user ?? null);
+      } catch (e) {
+        console.warn("[SatuTahu] Gagal memuat sesi:", e);
+        if (alive) setLoading(false);
+      }
+    })();
+
+    return () => {
+      alive = false;
+      sub.subscription.unsubscribe();
+    };
   }, [syncOnce]);
 
   // Perubahan progres lokal → sinkron (debounce); kembali ke tab / online → tarik perubahan perangkat lain
